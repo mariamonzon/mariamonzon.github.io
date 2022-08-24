@@ -2,8 +2,7 @@
 .idea/
 
 # Hugo
-resources/
-public/
+#resources/
 jsconfig.json
 node_modules/
 go.sum
