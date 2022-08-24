@@ -1,6 +1,6 @@
 ---
 role: Computer Vision and AI researchar
-avatar_filename: fotocarnet.jpg
+avatar_filename: avatar.jpg
 bio: My research interests include distributed robotics, mobile computing and
   programmable matter.
 interests:
@@ -16,7 +16,7 @@ social:
     link: https://www.linkedin.com/in/mariamonzon24/
   - display:
       header: false
-    link: https://github.com/mm24
+    link: https://github.com/mariamonzon
     icon_pack: fab
     icon: github
 organizations:
