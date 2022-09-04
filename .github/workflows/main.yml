@@ -1,0 +1,44 @@
+name: hugo CI
+
+on:
+  push:
+    branches: [ code ]
+
+jobs:
+  deploy:
+    environment: github-pages
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      #(Optional) If you have the theme added as submodule and Update theme step(next step) is not working then delete themes directory  
+      - name: Clone theme
+        run: git submodule add <theme's github repo> themes/<theme name> --depth=1
+            # e.g git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth=1
+
+      #(Optional) If you have the theme added as submodule, you can pull it and use the most updated version
+      - name: Update theme
+        run: git submodule update --init --recursive
+
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.87.0"
+
+      - name: Build
+        run: hugo --minify
+
+       # just for logging the Repo name and branch 
+      - name: Log Repo
+        run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - name: Log Branch
+        run: echo " current branch  is ${{ github.ref }} "
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TOKEN }}
+          external_repository: <username>/<reponame> # e.g whoami-shubham/hugo-blog
+          publish_dir: ./public
+          publish_branch: master
