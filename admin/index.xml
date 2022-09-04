@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maria Monzon | Academic</title>
-    <link>https://example.com/admin/</link>
-      <atom:link href="https://example.com/admin/index.xml" rel="self" type="application/rss+xml" />
+    <title>Maria Monzon</title>
+    <link>https://mariamonzon.com/admin/</link>
+      <atom:link href="https://mariamonzon.com/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Maria Monzon</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://example.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>Maria Monzon</title>
-      <link>https://example.com/admin/</link>
+      <link>https://mariamonzon.com/admin/</link>
     </image>
     
     <item>
       <title></title>
-      <link>https://example.com/admin/index/config.yml</link>
+      <link>https://mariamonzon.com/admin/index/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/admin/index/config.yml</guid>
+      <guid>https://mariamonzon.com/admin/index/config.yml</guid>
       <description></description>
     </item>
     
