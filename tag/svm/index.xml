@@ -47,14 +47,5 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
 </description>
     </item>
     
-    <item>
-      <title>Example Project</title>
-      <link>https://mariamonzon.com/project/valve_tracking/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/valve_tracking/</guid>
-      <description>&lt;p&gt;Out-of hospital cardiac arrest (OHCA) is one of the major causes of death in developed countries. Resuscitation guidelines recommend different treatments depending on the heart rhythm of the patient. The objective of this work is to develop a machine learning algorithm based on the ECG signal to automatically label heart rhythms in resuscitation episodes, a key tool for the retrospectively evaluation and improvement of the quality treatment. This work would help to systematise the annotation of databases since manual annotation of rhythms is a time-consuming task which can be an obstacle for handling large data sets.  The starting point of this project was a database composed of 1631 intervals of 3 seconds taken from a larger database containing OHCA 298 episodes. To review the ECG segments, a graphical interface (GUI) was developed which allows the display of the ECGs classified by the type of arrhythmia: asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fibrillation (VF), pulseless electrical activity (PEA) pulse generating rhythms (PR). The database has been processed using a machine learning algorithm and the results obtained using cross-validation. Two classifiers have been developed selecting five features of the ECG, first to identify AS, and then to discriminate organised rhythms (PR and PEA) from ventricular arrhythmias (VT and VF). These algorithms have been combined to create a three class rhythm classification algorithm. The total accuracy of the final algorithm was 90.9%. A precise algorithm was obtained for the classification of OHCA rhythm into: AS, organised,  and  shockable  rhythms.  This  algorithm  can  be  implemented  to  analyse resuscitation episodes using 3 seconds ECG segments, and could be integrated into new methods for retrospective analysis of OHCA. The results show that it is possible to automatically  interpret  resuscitation  cardiac  rhythms,  but  the  accuracy  needs  to  be improved. Nevertheless, these types of algorithms can be very useful since they allow an efficient rhythm classification with a minimum level of expert clinician supervision&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>

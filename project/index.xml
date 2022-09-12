@@ -5,12 +5,45 @@
     <link>https://mariamonzon.com/project/</link>
       <atom:link href="https://mariamonzon.com/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>https://mariamonzon.com/project/</link>
     </image>
+    
+    <item>
+      <title>Adaptive Frame Rate</title>
+      <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
+      <description>&lt;p&gt;The goal of the project seminar is to implement an adaptive sampling strategy to dynamically
+tune the sampling rate of a wearable egocentric camera. The sampling rate will be tuned
+based on context measure, i.e., a measure of motion, extracted from the frames.&lt;/p&gt;
+&lt;p&gt;The increasing development new media and data acquisition techniques have lead to new
+innovative video recording set ups. A clear example of that is the egocentric video, where
+a camera on head or on the chest approximates the visual field of the camera wearer.
+This new camera setting offers a valuable perspective to understand user&amp;rsquo;s activities and
+their context. In this case, the wearable head-mounted egocentric camera set up pursued
+a dietary event spotting in a free living condition.&lt;/p&gt;
+&lt;p&gt;A main feature of free-living data is a long recording duration. However, this kind of
+camera often acquire irrelevant data for the analysis task.
+In this work we introduce an adaptive sampling strategy to dynamically tune the sam-
+pling rate of a wearable egocentric camera. The adaptive sampling rate is based on a
+context measure. It is a motion measure, indicative if the recorded activity might be of
+our interest.&lt;/p&gt;
+&lt;p&gt;To evaluate the sampling strategy we implemented a computational simulation of resource consumption in terms of energy consumption and memory storage. For this purpose, I designed an analytical energy and memory model, a
+nd base our analysis on data extracted from datasheets. Our energy and memory model considers
+both sensing components, i.e., the cmos sensor, and processing, i.e., the microcontroller
+to process the deep neural network.&lt;/p&gt;
+&lt;p&gt;The clear advantagee of an adaptive frame rate is saving energy as the camera will not be
+acquiring data continuously. 
+Benefits from our method will be longer recording sessions, smaller battery employment or smaller
+storage space usage. This would help to overcome the limitations of the video recording,
+in terms of power consumption, while maintaining acceptable performance. 
+Furthermore, less data acquisition will also mean an energy saving in processing.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ECG-based algorithm for Annotation of Resuscitation Episode</title>
@@ -44,15 +77,6 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
 &lt;p&gt;The database has been processed using a machine learning algorithm and the results obtained using cross-validation. Two classifiers have been developed selecting five features of the ECG, first to identify AS, and then to discriminate organised rhythms (PR and PEA) from ventricular arrhythmias (VT and VF).&lt;/p&gt;
 &lt;p&gt;These algorithms have been combined to create a three class rhythm classification algorithm. The total accuracy of the final algorithm was 90.9%. A precise algorithm was obtained for the classification of OHCA rhythm into: AS, organised,  and  shockable  rhythms.  This  algorithm  can  be  implemented  to  analyse resuscitation episodes using 3 seconds ECG segments, and could be integrated into new methods for retrospective analysis of OHCA.&lt;/p&gt;
 &lt;p&gt;The results show that it is possible to automatically  interpret  resuscitation  cardiac  rhythm. These types of algorithms can be very useful since they allow an efficient rhythm classification with a minimum level of expert clinician supervision&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Example Project</title>
-      <link>https://mariamonzon.com/project/valve_tracking/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/valve_tracking/</guid>
-      <description>&lt;p&gt;Out-of hospital cardiac arrest (OHCA) is one of the major causes of death in developed countries. Resuscitation guidelines recommend different treatments depending on the heart rhythm of the patient. The objective of this work is to develop a machine learning algorithm based on the ECG signal to automatically label heart rhythms in resuscitation episodes, a key tool for the retrospectively evaluation and improvement of the quality treatment. This work would help to systematise the annotation of databases since manual annotation of rhythms is a time-consuming task which can be an obstacle for handling large data sets.  The starting point of this project was a database composed of 1631 intervals of 3 seconds taken from a larger database containing OHCA 298 episodes. To review the ECG segments, a graphical interface (GUI) was developed which allows the display of the ECGs classified by the type of arrhythmia: asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fibrillation (VF), pulseless electrical activity (PEA) pulse generating rhythms (PR). The database has been processed using a machine learning algorithm and the results obtained using cross-validation. Two classifiers have been developed selecting five features of the ECG, first to identify AS, and then to discriminate organised rhythms (PR and PEA) from ventricular arrhythmias (VT and VF). These algorithms have been combined to create a three class rhythm classification algorithm. The total accuracy of the final algorithm was 90.9%. A precise algorithm was obtained for the classification of OHCA rhythm into: AS, organised,  and  shockable  rhythms.  This  algorithm  can  be  implemented  to  analyse resuscitation episodes using 3 seconds ECG segments, and could be integrated into new methods for retrospective analysis of OHCA. The results show that it is possible to automatically  interpret  resuscitation  cardiac  rhythms,  but  the  accuracy  needs  to  be improved. Nevertheless, these types of algorithms can be very useful since they allow an efficient rhythm classification with a minimum level of expert clinician supervision&lt;/p&gt;
 </description>
     </item>
     
