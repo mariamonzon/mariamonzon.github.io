@@ -46,8 +46,18 @@
   <url>
     <loc>https://mariamonzon.com/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://mariamonzon.com/project/example/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://mariamonzon.com/tag/ecg/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/project/valve_tracking/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/tag/machine-learning/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/tag/matlab/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://mariamonzon.com/project/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/tag/svm/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://mariamonzon.com/admin/</loc><changefreq>weekly</changefreq></url></urlset>
