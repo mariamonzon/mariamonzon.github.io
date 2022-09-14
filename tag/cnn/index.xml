@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Adaptive Frame Rate</title>
+      <title>Adaptive Frame Rate for Egocentric Video</title>
       <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
@@ -49,7 +49,7 @@ our interest.&lt;/p&gt;
 nd base our analysis on data extracted from datasheets. Our energy and memory model considers
 both sensing components, i.e., the cmos sensor, and processing, i.e., the microcontroller
 to process the deep neural network.&lt;/p&gt;
-&lt;p&gt;The clear advantagee of an adaptive frame rate is saving energy as the camera will not be
+&lt;p&gt;The clear advantage of an adaptive frame rate is saving energy as the camera will not be
 acquiring data continuously. 
 Benefits from our method will be longer recording sessions, smaller battery employment or smaller
 storage space usage. This would help to overcome the limitations of the video recording,

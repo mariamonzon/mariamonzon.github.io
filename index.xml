@@ -137,7 +137,7 @@
     </item>
     
     <item>
-      <title>Adaptive Frame Rate</title>
+      <title>Adaptive Frame Rate for Egocentric Video</title>
       <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
@@ -160,7 +160,7 @@ our interest.&lt;/p&gt;
 nd base our analysis on data extracted from datasheets. Our energy and memory model considers
 both sensing components, i.e., the cmos sensor, and processing, i.e., the microcontroller
 to process the deep neural network.&lt;/p&gt;
-&lt;p&gt;The clear advantagee of an adaptive frame rate is saving energy as the camera will not be
+&lt;p&gt;The clear advantage of an adaptive frame rate is saving energy as the camera will not be
 acquiring data continuously. 
 Benefits from our method will be longer recording sessions, smaller battery employment or smaller
 storage space usage. This would help to overcome the limitations of the video recording,
@@ -295,6 +295,14 @@ $$&lt;/p&gt;
     </item>
     
     <item>
+      <title>Publications</title>
+      <link>https://mariamonzon.com/publications/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ECG-based algorithm for Annotation of Resuscitation Episode</title>
       <link>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -334,6 +342,22 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
       <link>https://mariamonzon.com/admin/index/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/admin/index/config.yml</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resume Page</title>
+      <link>https://mariamonzon.com/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/cv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resume Page</title>
+      <link>https://mariamonzon.com/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/education/</guid>
       <description></description>
     </item>
     
