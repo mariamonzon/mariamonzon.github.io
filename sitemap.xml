@@ -58,6 +58,10 @@
   <url>
     <loc>https://mariamonzon.com/publications/</loc><lastmod>2019-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://mariamonzon.com/cv/</loc><lastmod>2019-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/education/</loc><lastmod>2019-01-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://mariamonzon.com/tag/ecg/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
@@ -66,8 +70,4 @@
   <url>
     <loc>https://mariamonzon.com/tag/svm/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://mariamonzon.com/admin/</loc><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mariamonzon.com/cv/</loc><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://mariamonzon.com/education/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://mariamonzon.com/admin/</loc><changefreq>weekly</changefreq></url></urlset>

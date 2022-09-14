@@ -311,6 +311,22 @@ $$&lt;/p&gt;
     </item>
     
     <item>
+      <title>Resume Page</title>
+      <link>https://mariamonzon.com/cv/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/cv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resume Page</title>
+      <link>https://mariamonzon.com/education/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ECG-based algorithm for Annotation of Resuscitation Episode</title>
       <link>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -350,22 +366,6 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
       <link>https://mariamonzon.com/admin/index/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/admin/index/config.yml</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Resume Page</title>
-      <link>https://mariamonzon.com/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/cv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Resume Page</title>
-      <link>https://mariamonzon.com/education/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/education/</guid>
       <description></description>
     </item>
     
