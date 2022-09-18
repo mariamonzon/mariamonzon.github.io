@@ -82,182 +82,133 @@ always has a feeling of where is currently standing inside the room&lt;/li&gt;
       <link>https://mariamonzon.com/project/reinforcement-learning-warehouse/</link>
       <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/reinforcement-learning-warehouse/</guid>
-      <description>&lt;p&gt;Reinforcement Learning algorithm for optimal-storing objects in a warehouse&lt;/p&gt;
-&lt;p&gt;The problem represents a storage decision process where outcome is under the control of a robot, i.e, a decision maker
+      <description>&lt;p&gt;The problem represents a storage decision process where outcome is under the control of a robot, i.e, a decision maker
 agent, but also are partly random. Therefore, the problem can be well modeled as a discrete-time Markov Decision
-Processes.
-A tiny warehouse with (2x2) storage capacity locations is simulated. The picking robot (agent) interacts with the
-warehouse (environment) by store-restoring items in each warehouse cell or shelve . The dataset contains store and
-restore action for red, blue and white colored items although an empty field is also possible. The approach follow was:&lt;/p&gt;
+Processes. The approach follow was:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Implement a reinforcement-learning based algorithm&lt;/li&gt;
 &lt;li&gt;The robot is the agent and decides where to place the next part&lt;/li&gt;
 &lt;li&gt;Use the markov decision process toolbox for your solution&lt;/li&gt;
 &lt;li&gt;Choose the best performing MDP&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;feature-transformation&#34;&gt;Feature transformation&lt;/h2&gt;
-&lt;p&gt;Feature transformation refers to translating the data into an appropriate format allowing the ML model to learn from the data. For instance, categorical data need to be converted to numerical data for the Naïve Bayes classifier. The categorical labels were converted to values ranged between 0-5.
-A common step in ML is also feature selection, i.e selection of the features in dataset hypothesized to be the most descriptive. Therefore, all the numeric values were scaled between the range 0-1 to reduce the variance. The string features were vectorized and concatenated to create the feature matrix. The final feature dimension was 502. As an optional step, a model selector of the best K features was also implemented for feature dimensionality reduction.&lt;/p&gt;
-&lt;h2 id=&#34;model-training&#34;&gt;Model Training&lt;/h2&gt;
-&lt;p&gt;The selected classifier model is a Multinomial Naïve bayes classifier implemented in the sklearn library. As only few data samples were available in the dataset, a cross validation scheme has been used for training and evaluation. The data was splitted in  k=10 folds and with stratified sampling to mitigate the class imbalance. Note that even the predict phase was done in after fitting the classifier on the KFold iteration, but this does not interfere in the training process.&lt;/p&gt;
-&lt;h2 id=&#34;evaluation-and-result-visualization&#34;&gt;Evaluation and Result visualization&lt;/h2&gt;
-&lt;p&gt;As stated previously, the data samples present in the datasheet are not many to test the robustness of the classifier a cross validation scheme has been used for evaluation. For each class, the predicted probabilities are plotted in the next figure. The probabilities for each sample are close to 1, which resembles the a extreme probability assignament of Naïve Bayes Classifier.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed. 
-The most common evaluation method in classification is the so-called confusion matrix. The Matrix is represented for a binary classification although it can be extended to multiclass problem. The matrix represents the relation between correctly classified, i.e. true positives (TP)  and True Negatives (TN), and wrongly predicted samples , i.e. false negatives (FN) and false positives (FP)  for each class. The matrix can be displayed with absolute frequency values or normalized by each class total number of elements. The confusion matrix for the assignment are shown below:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-confussion-matrix.png&#34; alt=&#34;results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;From the confusion matrix to assess the the quality of the predictions further evaluation metrics can be derived, a ranged from 0 to 1 (represents the best possible score):&lt;/p&gt;
+&lt;h2 id=&#34;defitinions&#34;&gt;Defitinions&lt;/h2&gt;
+&lt;p&gt;The basic concepts to understand the promblem are shortly introduced based on &lt;em&gt;Artificial Intelligence: A Modern Approach&lt;/em&gt; book:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Accuracy: metric of all the correctly classified samples over the total number of samples that asses the overall performance of the model 
-
-$$ Accuracy = \frac{TP+TN}{TTP+TN+FP+FN}$$ 
-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reinforcement learning&lt;/strong&gt;: Type of dynamic programming that trains algorithms using
+a system of reward and punishment. The agent learns without intervention from a human by maximizing its reward
+and minimizing its penalty and updates itself continuously. The algorithm it automatically finds patterns
+and relationships inside of that dataset. It requires realtime data.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Precision:  proportion of correctly predicted samples (TP) to the total predicted samples as positive, therefore assess the correct prediction capability for each class.
-
-$$Precision= \frac{TP}{TP+FP}$$
-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agent&lt;/strong&gt;: A is the set of all possible moves the agent can make. An action is almost self-explanatory, but it should be noted that agents choose among a list of possible actions.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Recall: ratio of correctly predicted samples (TP) and actual total samples of such class, therefore an assessment metric of the ability to classify all correct instances per class.
-
-$$ Recall = \frac{TP}{TP+FN}$$ 
-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Environment&lt;/strong&gt;: The world through which the agent moves. The environment takes the agent&amp;rsquo;s current state and action as input, and returns as output the agent&amp;rsquo;s reward and its next state.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;F1-score: is the harmonic mean between precision (P) and recall (R) and asses the incorrectly predicted samples, especially in class imbalanced problems 
+&lt;p&gt;&lt;strong&gt;State&lt;/strong&gt;: The parameter values that describe the current cofiguration of the environment, which the agent uses to choose an action. A state is a concrete and immediate situation in which the agent finds itself; i.e. a specific place and moment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reward&lt;/strong&gt;: Feedback by which we effectively evaluate the agent&amp;rsquo;s action.
+From any given state, an agent sends output in the form of actions to the environment, and the environment
+returns the agent&amp;rsquo;s new state (which resulted from actingon the previous state) as well as rewards, if any.
+Rewards
+can be immediate or delayed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Markov decision process&lt;/strong&gt;: Markov decision processes (MDPS) is a model decision making in stochastic, sequential environments. The essence of the model is that a decision maker, or agent, inhabits an environment, which changes state randomly in response to action choices made by the agent. 
 
-$$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/reinforcement-learning-warehouse/agent-environment.png&#34; alt=&#34;agent&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The model achieves a total weighted accuracy of 90% and an averaged F1-score of 90%.  The detailed evaluation metrics for each class are summarize in the following table:&lt;/p&gt;
+&lt;h2 id=&#34;example-introduction&#34;&gt;Example Introduction&lt;/h2&gt;
+&lt;p&gt;A tiny warehouse with (2x2) storage capacity locations is simulated. The picking robot (agent) interacts with the
+warehouse (environment) by store-restoring items in each warehouse cell or shelve. The dataset contains store and
+restore action for red, blue and white colored items although an empty field is also possible.&lt;/p&gt;
+&lt;p&gt;When the agent is placed on a field position (𝑥𝑑, 𝑦𝑑), it can either store or restore each of the color items.
+There exists a total of six possible actions to change its environment. The robot can move in the (2x2) grid
+environment and start moving at initial grid position (1,1) . The robot is constrained to always to move only
+to one adjacent fields (not in diagonal).&lt;/p&gt;
+&lt;p&gt;The distance the robot needs to move is derived based on current (𝑥𝑐 , 𝑦𝑐 ) and goal position (𝑥𝑑 , 𝑦𝑑). The
+distance is calculated as the sum of the absolute differences of the layout position
+
+$$ 𝑑 = |𝑥_𝑑 − 𝑥_𝑐 | + |𝑦_𝑑 − 𝑦_𝑑|$$ 
+&lt;/p&gt;
+&lt;p&gt;Therefore, the distance to the position can be assigned to the cost of the action or negative reward. The ideal
+goal of the reinforcement learning approach would be to optimize the route picking storage strategy by
+minimizing the distance with rewards the store/restore motion actions.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;The Markov Discrete Process (MDP) algorithm was implemented for modelling the problem. A MDP is
+described by state transition probabilities. A general Reinforcement Learning and thus also MDP algorithm
+is defined with a set of variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Actions (A): refers to the operations an agent can perform which direct modify the environment. In our
+problem this are related to the effect on the warehouse grid cells, directly proportional to the warehouse size
+(𝑋, 𝑌). $ A = \{ 𝐴_{(1,1)}, 𝐴_{(1,2)}, 𝐴_{(2,1)}, … , 𝐴_{(X,Y)}\}$  where  $ |𝐴| = |𝑋 \cdot 𝑌|$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;States (S): represent all the possible configuration of environment, i.e, how the items are storage in the warehouse grid. In the addressed problem, the total states can be computed  $ |S| = \{𝑖𝑡𝑒𝑚𝑠_{𝑔𝑟𝑖𝑑}*move_{action}  \}$  where the items on the grid is calculated as the exponential relation of colored items number to grid size, and the move actions represent all the possible robot movements {store: blue/red/white, restore: blue/red/white }.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Transition probability matrix (TMP) in Markov processes stores the probability to transition from the current state to a next possible state after the agent has performed given action in a single time unit. The dimension if this matrix is determined by (|𝐴|,|𝑆|,|𝑆|).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reward matrix (R), is composed by the defined reward or symbolic benefit received performing and action 𝐴(𝑥,𝑦) for a given state. The shape of this matrix (|𝑆|,|𝐴|).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;transition-probability-matrix-tpm&#34;&gt;Transition Probability Matrix (TPM)&lt;/h3&gt;
+&lt;p&gt;In the simple addressed problem, the warehouse grid is of size the 2x2. Therefore, so have 2·2=4 possible actions and 1536 different states. In order to compute the probability actions, is necessary to iterate through all possible actions as well as all generated states. Then assign the possibility of having a colored item or being empty derived from the training data frequencies.
+It should also be taken into account if the warehouse grid is already full and if the linked operation is invalid. In that case, the transition probabilities are kept 0. To assert that the computation was correct, it was checked that all he probabilities for a particular state sum 1.&lt;/p&gt;
+&lt;h3 id=&#34;regard-matrix&#34;&gt;Regard Matrix&lt;/h3&gt;
+&lt;p&gt;The aim of the reinforcement learning algorithm is to maximize the obtained rewards. In this problem, the distance should influence the reward. Thus, the simple criteria to assign the negative distances values from the origin warehouse cell (1,1). At the same time, not from every state the robot can transition to other state. For the entries in the reward matrix, as the movement action would be invalid, a penalization of -10000 was taken as a reward.
+With the necessary TMP and R, a MDP model is trained within the python-MDPtoolbox package. It contains the most common Reinforcement Learning training approaches, such as Value Iteration and Policy Iteration. These were the best models selected for the simplified problem. The discount factor and maximum iteration hyperparameters were set to 0.9 and 750 respectively.&lt;/p&gt;
+&lt;h2 id=&#34;evaluation&#34;&gt;Evaluation&lt;/h2&gt;
+&lt;p&gt;MDP policy refers to a solution to which specifies an action for each state. Value iteration is defined as an algorithm that gives an optimal policy for a MDP, i.e., The ideal MDP solution. In the training run, for policy iteration 6 iterations were performed whereas for value iteration 35 were performed.
+To evaluate the model, a test dataset containing 60 pair of movement actions and colored items was used. Although different MDP algorithms were tried, there was no change on the result. The movements distance need was 232 for both Value Iteration and Policy Iteration. That may be due to on the restricted problem, the simple algorithm is already learning the optimal policy for the given rewards.
+In order to assess if the policy represents a better utility than random, a simple random walk approach through the grid was also implemented. In that the distance or movements performed by the robot are count. The random distance, although the random seed was fix, it rounds the range of 264.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Label&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Total  Samples&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Precision&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Recall&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;F1-score&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Algorithm&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Move Distance&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Finance&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;33&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.94&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Value Iteration&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;232&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Income&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;17&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Policy Iteration&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;232&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Leisure&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;65&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.89&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.92&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Living&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;26&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.81&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.86&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Private&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;21&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.77&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Standard of living&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;47&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Random Walk&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;264&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;For further visualization of the results, two additional graphic representations are shown in Figure 3. A Receiver Operator Characteristic (ROC) curve is a representation to assess the performance of binary classifiers, but it can be adapted for a multiclass classification by computing a curve for each class. The curve was computed following one-vs-all approach so that each class considers that class label as a true and all others as negative. From this curve, a further metric is usually derived as a summary of ROC, the area under the curve (AUC).  When AUC value is 1, it means that the classifier is able to classify all the classes, on the contrary, when the values is 0.5, the classifier only can classify a random label or a constant value. As depicted in the evaluation ROC, for all classes the AUC measures are over 0.88. Furthermore, the Jaccard similarity is a similarity metric for samples of two class sets to determine which samples  are shared and which are distinct. It is defined as the number of the label intersection divided by the union of two label sets.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/metrics-roc-jaccard.png&#34; alt=&#34;metrics&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
 </description>
     </item>
     
