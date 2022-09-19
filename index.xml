@@ -515,6 +515,79 @@ $$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
     </item>
     
     <item>
+      <title>Myocardial Pathology Segmentation Combining Multi-Sequence Cardiac Magnetic Resonance Images</title>
+      <link>https://mariamonzon.com/project/myocardial-scar-segmentation/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/project/myocardial-scar-segmentation/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Accurate segmentation of myocardial pathological tissue from cardiac magnetic resonance images (CMR), such as scar tissue and edema, f is crutial to the assessment of the severity of myocardial infarction (MI).
+CMRis the gold standar to provide anatomical and functional information of heart. Specifically, late gadolinium enhancement (LGE) CMR sequence which is used to diagnosis MI, the T2-weighted CMR which resembles ischemic regions, and the balanced- Steady State Free Precession (bSSFP) cine sequence which captures cardiac motions . Combining these multi-sequence CMR data could provide reliable information regarding to the pathological as well as morphological information of the myocardium &lt;a href=&#34;http://www.sdspeople.fudan.edu.cn/zhuangxiahai/0/myops20/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;p&gt;The input dataset  contains 45 cases of multi-sequence CMR from Myops2020 challenge &lt;a href=&#34;http://www.sdspeople.fudan.edu.cn/zhuangxiahai/0/myops20/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;
+
+
+
+
+
+
+
+
+
+. Each case refers to a patient with three sequence CMR, i.e., LGE, T2 and bSSFP CMR. All these clinical data have got institutional ethic approval and have been anonymized.
+The “masks” folder contains 45 cases of multi-sequence CMR, where each mask represents the segmentation map of the the corresponding CMR Slice image:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Label 1: normal myocardium&lt;/li&gt;
+&lt;li&gt;Label 2: edema&lt;/li&gt;
+&lt;li&gt;Label 3: scar&lt;/li&gt;
+&lt;li&gt;Label 0: Background&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/myops-scar-segmentation/example.png&#34; alt=&#34;example&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The proposed approach involves a two-staged network. First a heatmap-based regression architecture was train to detect a small ROI and locate the myocardium, based on , in order to reduce task complexity. Sequentially a a U-Net based neural network was train to perform  multi-modal pathological region segmentation.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/myops-scar-segmentation/108_T2_1.png&#34; alt=&#34;pathology-example&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
       <link>https://mariamonzon.com/publication/ismrm-motion-parameters/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
