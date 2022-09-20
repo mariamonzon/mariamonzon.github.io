@@ -213,210 +213,25 @@ In order to assess if the policy represents a better utility than random, a simp
     </item>
     
     <item>
-      <title>Warehouse storing Route optimizaiton with Reinforcement Learning</title>
-      <link>https://mariamonzon.com/project/text-classifier-bayes/</link>
-      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/text-classifier-bayes/</guid>
-      <description>&lt;p&gt;The aim of the project is to classify financial transactions, stored in a datasheet file, into one of seven categories listed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Income&lt;/li&gt;
-&lt;li&gt;Private (cash, deposit, donation, presents)&lt;/li&gt;
-&lt;li&gt;Living (rent, additional flat expenses, &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;Standard of living (food, health, children, &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;Finance (credit, bank costs, insurances, savings)&lt;/li&gt;
-&lt;li&gt;Traffic (public transport, gas stations, bike, car &amp;hellip;)&lt;/li&gt;
-&lt;li&gt;Leisure (hobby, sport, vacation, shopping, &amp;hellip;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The selected approach is to train a Multinomial Naive Bayes classifier, fitted with the transaction word counts and class categories. Naive Bayes is a statistical classification technique based on Bayes probability theorem, considered as one most basic supervised learning algorithm. Naive Bayes classifier assumes that the features in a class are independent of other features.
-The followed approach to implement the classifier can be is based on the standard steps of Machine Learning (ML) algorithms: data exploration and preprocessing, feature selection and transformation, classifier model definition and training. The final phase of the assignment is dedicated for results visualization and evaluation.&lt;/p&gt;
-&lt;h2 id=&#34;data-exploration-and-preprocessing&#34;&gt;Data exploration and preprocessing&lt;/h2&gt;
-&lt;p&gt;The essential first step is to import the dataset files into the python program, loaded as a pandas DataFrame data structure. The next step performed was a data quality assessment by printing the header columns, missing values datatypes and a short overview of the data samples. Furthermore, the unique values of each field as well as the label frequencies are printed to determine if the dataset suffers from class imbalance.
-As a quality assessment result, data cleaning procedures were performed. The missing values were substituted the missing values with 0, to minimize the effect of these on the accuracy of the model. For the text fields, the data was standardized by removing capital, special and/or punctuation characters, German stopwords and 2 or a single character-words. Finally, the sentences were splitted into single words (tokenize).
-After the data cleaning and preprocessing, to check if the process was done successfully, a final data inspection and a summary of the dataset by class was depicted. A secondary reason for the data inspection was to have an insight of the feature’s distributions and outlier identification.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/1-HistogramTransactionClass.png&#34; alt=&#34;transaction-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;feature-transformation&#34;&gt;Feature transformation&lt;/h2&gt;
-&lt;p&gt;Feature transformation refers to translating the data into an appropriate format allowing the ML model to learn from the data. For instance, categorical data need to be converted to numerical data for the Naïve Bayes classifier. The categorical labels were converted to values ranged between 0-5.
-A common step in ML is also feature selection, i.e selection of the features in dataset hypothesized to be the most descriptive. Therefore, all the numeric values were scaled between the range 0-1 to reduce the variance. The string features were vectorized and concatenated to create the feature matrix. The final feature dimension was 502. As an optional step, a model selector of the best K features was also implemented for feature dimensionality reduction.&lt;/p&gt;
-&lt;h2 id=&#34;model-training&#34;&gt;Model Training&lt;/h2&gt;
-&lt;p&gt;The selected classifier model is a Multinomial Naïve bayes classifier implemented in the sklearn library. As only few data samples were available in the dataset, a cross validation scheme has been used for training and evaluation. The data was splitted in  k=10 folds and with stratified sampling to mitigate the class imbalance. Note that even the predict phase was done in after fitting the classifier on the KFold iteration, but this does not interfere in the training process.&lt;/p&gt;
-&lt;h2 id=&#34;evaluation-and-result-visualization&#34;&gt;Evaluation and Result visualization&lt;/h2&gt;
-&lt;p&gt;As stated previously, the data samples present in the datasheet are not many to test the robustness of the classifier a cross validation scheme has been used for evaluation. For each class, the predicted probabilities are plotted in the next figure. The probabilities for each sample are close to 1, which resembles the a extreme probability assignament of Naïve Bayes Classifier.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed. 
-The most common evaluation method in classification is the so-called confusion matrix. The Matrix is represented for a binary classification although it can be extended to multiclass problem. The matrix represents the relation between correctly classified, i.e. true positives (TP)  and True Negatives (TN), and wrongly predicted samples , i.e. false negatives (FN) and false positives (FP)  for each class. The matrix can be displayed with absolute frequency values or normalized by each class total number of elements. The confusion matrix for the assignment are shown below:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-confussion-matrix.png&#34; alt=&#34;results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;From the confusion matrix to assess the the quality of the predictions further evaluation metrics can be derived, a ranged from 0 to 1 (represents the best possible score):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Accuracy: metric of all the correctly classified samples over the total number of samples that asses the overall performance of the model 
-
-$$ Accuracy = \frac{TP+TN}{TTP+TN+FP+FN}$$ 
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Precision:  proportion of correctly predicted samples (TP) to the total predicted samples as positive, therefore assess the correct prediction capability for each class.
-
-$$Precision= \frac{TP}{TP+FP}$$
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Recall: ratio of correctly predicted samples (TP) and actual total samples of such class, therefore an assessment metric of the ability to classify all correct instances per class.
-
-$$ Recall = \frac{TP}{TP+FN}$$ 
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;F1-score: is the harmonic mean between precision (P) and recall (R) and asses the incorrectly predicted samples, especially in class imbalanced problems 
-
-$$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
-&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The model achieves a total weighted accuracy of 90% and an averaged F1-score of 90%.  The detailed evaluation metrics for each class are summarize in the following table:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Label&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Total  Samples&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Precision&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;Recall&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;F1-score&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Finance&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;33&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.94&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Income&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;17&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Leisure&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;65&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.89&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.92&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Living&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;26&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.81&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.86&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Private&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;21&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.77&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Standard of living&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;47&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;For further visualization of the results, two additional graphic representations are shown in Figure 3. A Receiver Operator Characteristic (ROC) curve is a representation to assess the performance of binary classifiers, but it can be adapted for a multiclass classification by computing a curve for each class. The curve was computed following one-vs-all approach so that each class considers that class label as a true and all others as negative. From this curve, a further metric is usually derived as a summary of ROC, the area under the curve (AUC).  When AUC value is 1, it means that the classifier is able to classify all the classes, on the contrary, when the values is 0.5, the classifier only can classify a random label or a constant value. As depicted in the evaluation ROC, for all classes the AUC measures are over 0.88. Furthermore, the Jaccard similarity is a similarity metric for samples of two class sets to determine which samples  are shared and which are distinct. It is defined as the number of the label intersection divided by the union of two label sets.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/metrics-roc-jaccard.png&#34; alt=&#34;metrics&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
+      <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
+      <link>https://mariamonzon.com/project/cardiac-parameter-extraction/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/project/cardiac-parameter-extraction/</guid>
+      <description>&lt;p&gt;Diastolic dysfunction is an important cause of cardiac insuf-
+ficiency, defined as a malfunctioning filling of the heart during diastole.
+The analysis of mitral valve motion is known to be relevant in the diagno-
+sis of cardiac dysfunction. Cardiac motion parameters can be extracted
+from Cardiac Magnetic Resonance (CMR) images. However, in clinical
+setting valve motion modeling usually needs a manual intervention to lo-
+calize the valvular plane. We propose two chained Convolutional Neural
+Networks (CNN) for automatic tracking of mitral valve-annulus land-
+marks on time-resolved 2-chamber and 4-chamber CMR images. 
+The first CNN is trained to detect the region of interest and the second to
+track the landmarks along the cardiac cycle. The presented deep learn-
+ing system has high accuracy in terms of temporal landmark tracking
+and motion assessment. Furthermore, we successfully extracted several
+motion-related parameters thereby overcoming time-consuming annota-
+tion and allowing statistical analysis over a large number of datasets.&lt;/p&gt;
 </description>
     </item>
     
@@ -689,43 +504,218 @@ The “masks” folder contains 45 cases of multi-sequence CMR, where each mask 
     </item>
     
     <item>
-      <title>Adaptive Frame Rate for Egocentric Video</title>
-      <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
-      <description>&lt;p&gt;The goal of the project seminar is to implement an adaptive sampling strategy to dynamically
-tune the sampling rate of a wearable egocentric camera. The sampling rate will be tuned
-based on context measure, i.e., a measure of motion, extracted from the frames.&lt;/p&gt;
-&lt;p&gt;The increasing development new media and data acquisition techniques have lead to new
-innovative video recording set ups. A clear example of that is the egocentric video, where
-a camera on head or on the chest approximates the visual field of the camera wearer.
-This new camera setting offers a valuable perspective to understand user&amp;rsquo;s activities and
-their context. In this case, the wearable head-mounted egocentric camera set up pursued
-a dietary event spotting in a free living condition.&lt;/p&gt;
-&lt;p&gt;A main feature of free-living data is a long recording duration. However, this kind of
-camera often acquire irrelevant data for the analysis task.
-In this work we introduce an adaptive sampling strategy to dynamically tune the sam-
-pling rate of a wearable egocentric camera. The adaptive sampling rate is based on a
-context measure. It is a motion measure, indicative if the recorded activity might be of
-our interest.&lt;/p&gt;
-&lt;p&gt;To evaluate the sampling strategy we implemented a computational simulation of resource consumption in terms of energy consumption and memory storage. For this purpose, I designed an analytical energy and memory model, a
-nd base our analysis on data extracted from datasheets. Our energy and memory model considers
-both sensing components, i.e., the cmos sensor, and processing, i.e., the microcontroller
-to process the deep neural network.&lt;/p&gt;
-&lt;p&gt;The clear advantage of an adaptive frame rate is saving energy as the camera will not be
-acquiring data continuously. 
-Benefits from our method will be longer recording sessions, smaller battery employment or smaller
-storage space usage. This would help to overcome the limitations of the video recording,
-in terms of power consumption, while maintaining acceptable performance. 
-Furthermore, less data acquisition will also mean an energy saving in processing.&lt;/p&gt;
+      <title>Warehouse storing Route optimizaiton with Reinforcement Learning</title>
+      <link>https://mariamonzon.com/project/text-classifier-bayes/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/project/text-classifier-bayes/</guid>
+      <description>&lt;p&gt;The aim of the project is to classify financial transactions, stored in a datasheet file, into one of seven categories listed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Income&lt;/li&gt;
+&lt;li&gt;Private (cash, deposit, donation, presents)&lt;/li&gt;
+&lt;li&gt;Living (rent, additional flat expenses, &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;Standard of living (food, health, children, &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;Finance (credit, bank costs, insurances, savings)&lt;/li&gt;
+&lt;li&gt;Traffic (public transport, gas stations, bike, car &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;Leisure (hobby, sport, vacation, shopping, &amp;hellip;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The selected approach is to train a Multinomial Naive Bayes classifier, fitted with the transaction word counts and class categories. Naive Bayes is a statistical classification technique based on Bayes probability theorem, considered as one most basic supervised learning algorithm. Naive Bayes classifier assumes that the features in a class are independent of other features.
+The followed approach to implement the classifier can be is based on the standard steps of Machine Learning (ML) algorithms: data exploration and preprocessing, feature selection and transformation, classifier model definition and training. The final phase of the assignment is dedicated for results visualization and evaluation.&lt;/p&gt;
+&lt;h2 id=&#34;data-exploration-and-preprocessing&#34;&gt;Data exploration and preprocessing&lt;/h2&gt;
+&lt;p&gt;The essential first step is to import the dataset files into the python program, loaded as a pandas DataFrame data structure. The next step performed was a data quality assessment by printing the header columns, missing values datatypes and a short overview of the data samples. Furthermore, the unique values of each field as well as the label frequencies are printed to determine if the dataset suffers from class imbalance.
+As a quality assessment result, data cleaning procedures were performed. The missing values were substituted the missing values with 0, to minimize the effect of these on the accuracy of the model. For the text fields, the data was standardized by removing capital, special and/or punctuation characters, German stopwords and 2 or a single character-words. Finally, the sentences were splitted into single words (tokenize).
+After the data cleaning and preprocessing, to check if the process was done successfully, a final data inspection and a summary of the dataset by class was depicted. A secondary reason for the data inspection was to have an insight of the feature’s distributions and outlier identification.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/1-HistogramTransactionClass.png&#34; alt=&#34;transaction-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;feature-transformation&#34;&gt;Feature transformation&lt;/h2&gt;
+&lt;p&gt;Feature transformation refers to translating the data into an appropriate format allowing the ML model to learn from the data. For instance, categorical data need to be converted to numerical data for the Naïve Bayes classifier. The categorical labels were converted to values ranged between 0-5.
+A common step in ML is also feature selection, i.e selection of the features in dataset hypothesized to be the most descriptive. Therefore, all the numeric values were scaled between the range 0-1 to reduce the variance. The string features were vectorized and concatenated to create the feature matrix. The final feature dimension was 502. As an optional step, a model selector of the best K features was also implemented for feature dimensionality reduction.&lt;/p&gt;
+&lt;h2 id=&#34;model-training&#34;&gt;Model Training&lt;/h2&gt;
+&lt;p&gt;The selected classifier model is a Multinomial Naïve bayes classifier implemented in the sklearn library. As only few data samples were available in the dataset, a cross validation scheme has been used for training and evaluation. The data was splitted in  k=10 folds and with stratified sampling to mitigate the class imbalance. Note that even the predict phase was done in after fitting the classifier on the KFold iteration, but this does not interfere in the training process.&lt;/p&gt;
+&lt;h2 id=&#34;evaluation-and-result-visualization&#34;&gt;Evaluation and Result visualization&lt;/h2&gt;
+&lt;p&gt;As stated previously, the data samples present in the datasheet are not many to test the robustness of the classifier a cross validation scheme has been used for evaluation. For each class, the predicted probabilities are plotted in the next figure. The probabilities for each sample are close to 1, which resembles the a extreme probability assignament of Naïve Bayes Classifier.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed. 
+The most common evaluation method in classification is the so-called confusion matrix. The Matrix is represented for a binary classification although it can be extended to multiclass problem. The matrix represents the relation between correctly classified, i.e. true positives (TP)  and True Negatives (TN), and wrongly predicted samples , i.e. false negatives (FN) and false positives (FP)  for each class. The matrix can be displayed with absolute frequency values or normalized by each class total number of elements. The confusion matrix for the assignment are shown below:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-confussion-matrix.png&#34; alt=&#34;results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;From the confusion matrix to assess the the quality of the predictions further evaluation metrics can be derived, a ranged from 0 to 1 (represents the best possible score):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Accuracy: metric of all the correctly classified samples over the total number of samples that asses the overall performance of the model 
+
+$$ Accuracy = \frac{TP+TN}{TTP+TN+FP+FN}$$ 
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Precision:  proportion of correctly predicted samples (TP) to the total predicted samples as positive, therefore assess the correct prediction capability for each class.
+
+$$Precision= \frac{TP}{TP+FP}$$
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Recall: ratio of correctly predicted samples (TP) and actual total samples of such class, therefore an assessment metric of the ability to classify all correct instances per class.
+
+$$ Recall = \frac{TP}{TP+FN}$$ 
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;F1-score: is the harmonic mean between precision (P) and recall (R) and asses the incorrectly predicted samples, especially in class imbalanced problems 
+
+$$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The model achieves a total weighted accuracy of 90% and an averaged F1-score of 90%.  The detailed evaluation metrics for each class are summarize in the following table:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Label&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Total  Samples&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Precision&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Recall&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;F1-score&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Finance&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;33&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.94&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Income&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;17&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.00&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Leisure&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;65&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.89&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.92&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Living&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;26&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.81&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.86&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Private&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;21&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.77&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.95&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Standard of living&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;47&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.91&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.85&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.88&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For further visualization of the results, two additional graphic representations are shown in Figure 3. A Receiver Operator Characteristic (ROC) curve is a representation to assess the performance of binary classifiers, but it can be adapted for a multiclass classification by computing a curve for each class. The curve was computed following one-vs-all approach so that each class considers that class label as a true and all others as negative. From this curve, a further metric is usually derived as a summary of ROC, the area under the curve (AUC).  When AUC value is 1, it means that the classifier is able to classify all the classes, on the contrary, when the values is 0.5, the classifier only can classify a random label or a constant value. As depicted in the evaluation ROC, for all classes the AUC measures are over 0.88. Furthermore, the Jaccard similarity is a similarity metric for samples of two class sets to determine which samples  are shared and which are distinct. It is defined as the number of the label intersection divided by the union of two label sets.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/metrics-roc-jaccard.png&#34; alt=&#34;metrics&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Adaptive Frame Rate for Egocentric Video</title>
-      <link>https://mariamonzon.com/project/cardiac-parameter-extraction/</link>
+      <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/cardiac-parameter-extraction/</guid>
+      <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
       <description>&lt;p&gt;The goal of the project seminar is to implement an adaptive sampling strategy to dynamically
 tune the sampling rate of a wearable egocentric camera. The sampling rate will be tuned
 based on context measure, i.e., a measure of motion, extracted from the frames.&lt;/p&gt;
