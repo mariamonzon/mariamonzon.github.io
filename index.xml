@@ -229,6 +229,21 @@ In order to assess if the policy represents a better utility than random, a simp
     </item>
     
     <item>
+      <title>Deep Learning based reach-and-grasp EEG decoder</title>
+      <link>https://mariamonzon.com/project/eeg-grasp-decoder/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/project/eeg-grasp-decoder/</guid>
+      <description>&lt;p&gt;The most common technique to measure the brain noninvasively is the electroencephalogram (EEG), due to its ease of use and cost/performance trade-off.&lt;/p&gt;
+&lt;p&gt;An EEG is a non-invasive technique that consists of placing electrodes on the head to monitor the electrical activity produced when neurons fire. The EEG records and measures electrical signals of the human brain from multiple cortical areas. Therefore, EEG monitoring allows us to quantify different types of brain waves, also known as neural oscillations. Some of the best-known and most-advertised applications of EEG-based neurotechnologies are brain-control of different types of devices&lt;/p&gt;
+&lt;p&gt;Despite the high number of degrees of freedom of the human hand, most actions of daily life can be executed incorporating only palmar, pincer and lateral grasp. In this study we attempt to discriminate these three different executed reach-and-grasp actions utilizing their EEG neural correlates.&lt;/p&gt;
+&lt;p&gt;In a cue-guided experiment (see Figure 1), 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects. We recorded
+72 trials for each reach-and-grasp condition and from a no-movement condition. In an oﬄine multiclass classiﬁcation scenario (10 x 5 crossvalidation),
+which incorporated not only all reach-and-grasp actions but also the no-movement condition, we used a window of 1000 ms for extracting time domain
+features.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
       <link>https://mariamonzon.com/project/cardiac-parameter-extraction/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
