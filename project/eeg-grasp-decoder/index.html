@@ -835,13 +835,139 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>The most common technique to measure the brain noninvasively is the electroencephalogram (EEG), due to its ease of use and cost/performance trade-off.</p>
-<p>An EEG is a non-invasive technique that consists of placing electrodes on the head to monitor the electrical activity produced when neurons fire. The EEG records and measures electrical signals of the human brain from multiple cortical areas. Therefore, EEG monitoring allows us to quantify different types of brain waves, also known as neural oscillations. Some of the best-known and most-advertised applications of EEG-based neurotechnologies are brain-control of different types of devices</p>
-<p>Despite the high number of degrees of freedom of the human hand, most actions of daily life can be executed incorporating only palmar, pincer and lateral grasp. In this study we attempt to discriminate these three different executed reach-and-grasp actions utilizing their EEG neural correlates.</p>
-<p>In a cue-guided experiment (see Figure 1), 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects. We recorded
-72 trials for each reach-and-grasp condition and from a no-movement condition. In an oﬄine multiclass classiﬁcation scenario (10 x 5 crossvalidation),
-which incorporated not only all reach-and-grasp actions but also the no-movement condition, we used a window of 1000 ms for extracting time domain
-features.</p>
+      <p>Decoding three different executed reach-and-grasp actions utilizing their electroencephalogram (EEG) recording from different electrodes is of crutial significance for the rehabilitation of hand functions of patients with motor disorders <a href="https://pubmed.ncbi.nlm.nih.gov/28853420/" target="_blank" rel="noopener">[1]</a>.
+Despite the high freedom of the human hand movements, most actions of daily life can be executed incorporating only palmar, lateral and grasp.  Recent studies have already shown that neural correlates of natural reach-and-grasp actions can be identified in the EEG <a href="https://pubmed.ncbi.nlm.nih.gov/28853420/" target="_blank" rel="noopener">[1]</a><a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">[2]</a>.</p>
+<p>Deep Learning has recently achieved promising results in the field of Computer Vision and Biomedical Engineering. Therefore, this work aims to study the possibility of develop Deep learning based decoders to classify grasp actions based on EEG signals.  We have also studied the possibility of developing intersubject classifiers and transfer learning between the different subject technologies. For this purpose, different neural network architectures have been tested, single trial vs crop trial performance has been evaluated as well as the different training techniques: within-subject and inter-subject training.</p>
+<h2 id="eeg-introduction">EEG Introduction</h2>
+<p>The EEG is a cost-effective, non-invasive technique to examine brain activity linked to multiple neurocognitive processes that underlie human behavior. It consists of placing electrodes on the head to monitor the electrical activity produced when neurons fire. The EEG records and measures electrical signals of the human brain from multiple cortical areas. Therefore, EEG monitoring allows to quantify different types of brain waves, also known as neural oscillations.
+The standard pipeline followed to extract information is depicted in the next figure:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-eeg-standard-decoding-pipeline-adapted-from-bitbrain-three-important-steps-when-processing-eeg-april-23-2020-httpswwwbitbraincomblogai-eeg-data-processing">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/methods-eeg-decoding.png" alt="methods-eeg-decoding" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      EEG standard decoding pipeline. Adapted from 
+Bitbrain. “Three important steps when processing EEG”, April 23, 2020, <a href="https://www.bitbrain.com/blog/ai-eeg-data-processing" target="_blank" rel="noopener">https://www.bitbrain.com/blog/ai-eeg-data-processing</a>
+    </figcaption></figure>
+</p>
+<h2 id="dataset">Dataset</h2>
+<p>In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at <a href="http://bnci-horizon-2020.eu/database/data-sets" target="_blank" rel="noopener">BNCI Horizon 2020</a>. 
+The pre-recorded dataset contains 7 min runs, leading to 80 trials per condition (TPC) distributed over 4 runs / 20 trials for each reach-and-grasp condition and from a no-movement condition.
+The 45 right handed participants performed two self-initiated reach-and-grasp (palmar and lateral grasp) movement conditions.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-reach-and-grasp-movement-decoding-from-eeg-with-gel-water-and-dry-electrodes-dataset-experimental-set-up-2httpswwwfrontiersinorgarticles103389fnins202000849full">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/grasp-dataset-definition.png" alt="grasp-task" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Reach and Grasp movement decoding from EEG with gel, water and dry electrodes dataset experimental set-up <a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">2</a>
+    </figcaption></figure>
+</p>
+<ul>
+<li>Gel-based electrodes recordings. EEG was measured with 58 electrodes (frontal, central and parietal areas).</li>
+<li>Water-based electrodes recordings mobile and water-based electrodes EEG-Versatile™ system with 32 electrodes</li>
+<li>Dry-electrodes recordings measured using the dry-electrodes EEG-Hero™ headset.  EEG was measured with 11 electrodes over the sensorimotor cortex.</li>
+</ul>
+<h3 id="data-proprocesssing">Data Proprocesssing</h3>
+<p>The EEG data processsing was analogous to the one in <a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">[2]</a>. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz. 
+We defined a window of interest for each movement trial of [-2 3] s with respect to the movement onset at second 0.
+In addition, we also extracted 81 rest trials from inactivity periods with a duration of 5 seconds.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="vanilla-1d-network">Vanilla 1D Network</h3>
+<p>We aimed to design a single CNN architecture to accurately classify grasp actions from differente EEG decoding modalitites, while  being as compact and simple as possible. We try a simple vanilla 1D convolutional neural network based on 1D temporal convolutions in order to encapsulate EEG feature extraction methodologies used in traditional classiers <a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">[2]</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-overview-of-1d-cnn-designed-architecture-it-contains-a-1d-convolution-block-layer-followed-by-a-temporal-pooling-and-convolution-kernel-to-extract-features-that-are-the-input-for-the-dense-layer">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/network-description.png" alt="methods-eeg-network" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Overview of 1D CNN designed architecture. It contains a 1D convolution block layer followed by a temporal pooling and convolution kernel to extract features that are the input for the dense layer
+    </figcaption></figure>
+</p>
+<h3 id="eegnet-3httpsiopscienceioporgarticle1010881741-2552aace8c">EEGNet <a href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c" target="_blank" rel="noopener">[3]</a></h3>
+<p>EEGNet has three convolution layers: (a) a one-dimensional convolution analogous to temporal band-pass filtering, (b) a depthwise convolution to perform spatial filtering, and (c) a separable convolution to identify temporal patterns across the previous filters.</p>
+<h3 id="htnet-architecture-4httpsdoiorg1010881741-2552abda0b">HTNet architecture <a href="https://doi.org/10.1088/1741-2552/abda0b" target="_blank" rel="noopener">[4]</a></h3>
+<p>HTNet builds upon EEGNet <a href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c" target="_blank" rel="noopener">[3]</a>, a compact convolutional neural network.  For HTNet, The authos added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.</p>
+<h3 id="training-strategies">Training Strategies</h3>
+<p>Classiffcation results are reported for differente training stratesgies: within-subject and cross-subject.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-test-strategies-for-the-evaluation-of-the-resutls">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/methods-training-strategy.png" alt="methods-training" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Test strategies for the evaluation of the resutls
+    </figcaption></figure>
+
+Within-subject classiffiation uses a portion of the subjects data to train a model specifically for that subject,
+although cross-subject classiffcation uses the data from other subjects to train a subject-agnostic
+model. While within-subject models tend to perform better than cross-subject models on a variety
+of tasks, there is ongoing research investigating techniques to minimize (or possibly eliminate) the
+need for subject-specific information to train robust systems</p>
+<h2 id="results">Results</h2>
+<h2 id="references">References</h2>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/28853420/" target="_blank" rel="noopener">[1]</a> Schwarz A, Ofner P, Pereira J, Sburlea AI, Müller-Putz GR. Decoding natural reach-and-grasp actions from human EEG. J Neural Eng. 2018 Feb;15(1):016005. doi: 10.1088/1741-2552/aa8911. PMID: 28853420.</p>
+<p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">[2]</a> Schwarz, A., Escolano, C., Montesano, L., &amp; Müller-Putz, G. (2020). Analyzing and Decoding Natural Reach-and-Grasp Actions Using Gel, Water and Dry EEG Systems. Frontiers in Neuroscience, 14.</p>
+<p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c" target="_blank" rel="noopener">[3]</a> Lawhern V J, Solon A J, Waytowich N R, Gordon S M, Hung C P and Lance B J 2018 Eegnet: a compact convolutional neural network for EEG-based brain–computer interfaces J. Neural Eng. 15 056013</p>
+<p><a href="https://doi.org/10.1088/1741-2552/abda0b" target="_blank" rel="noopener">[4]</a> Peterson, S. M., Steine-Hanson, Z., Davis, N., Rao, R. P. N., &amp; Brunton, B. W. (2021). Generalized neural decoders for transfer learning across participants and recording modalities.
+Journal of Neural Engineering. <a href="https://doi.org/10.1088/1741-2552/abda0b" target="_blank" rel="noopener">https://doi.org/10.1088/1741-2552/abda0b</a></p>
 
     </div>
 
