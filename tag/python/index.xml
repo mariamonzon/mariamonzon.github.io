@@ -254,8 +254,9 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
 &lt;h3 id=&#34;htnet-architecture-4httpsdoiorg1010881741-2552abda0b&#34;&gt;HTNet architecture &lt;a href=&#34;https://doi.org/10.1088/1741-2552/abda0b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[4]&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;HTNet builds upon EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;. The authors added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.  The temporal convolution and Hilbert transform layers generate data-driven spectral features that can then be projected from electrodes onto common regions of interest using a predefined weight matrix.&lt;/p&gt;
 &lt;h3 id=&#34;training-strategies&#34;&gt;Training Strategies&lt;/h3&gt;
-&lt;p&gt;Classiffcation results are reported for differente training stratesgies: within-subject and cross-subject.
-
+&lt;p&gt;Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another technology and performing fine-tunning on the target technology.&lt;br&gt;
+The cross-validation strategy used is know as &amp;ldquo;leave one-subject-out&amp;rdquo;. Given the N subjects, The training subset is fromed by N - 1, while the remaining subject is used for testing.&lt;/p&gt;
+&lt;p&gt;
 
 
 
@@ -277,12 +278,33 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
   &lt;/div&gt;&lt;figcaption&gt;
       Test strategies for the evaluation of the resutls
     &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;data-augmentation&#34;&gt;Data Augmentation&lt;/h3&gt;
+&lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data. 
+Data augmentation is especially useful for EEG signals where the limitation of small-scale datasets greatly affects the performance of classifiers. Still due to the variability of EEG and time-series nature, it is challenging to augment the data in the feature space. Based on the findings of &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;, we implemented an easy on-the-fly data augmentation that consist on band filtering the training data. The aim is to enforce the network to learn different features at different frequency bands.&lt;/p&gt;
+&lt;p&gt;
 
-Within-subject classiffiation uses a portion of the subjects data to train a model specifically for that subject,
-although cross-subject classiffcation uses the data from other subjects to train a subject-agnostic
-model. While within-subject models tend to perform better than cross-subject models on a variety
-of tasks, there is ongoing research investigating techniques to minimize (or possibly eliminate) the
-need for subject-specific information to train robust systems&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-overview-of-trainig-pipeline-methods&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-split-bands.png&#34; alt=&#34;methods-augmentation&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Overview of trainig pipeline methods
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt; Schwarz A, Ofner P, Pereira J, Sburlea AI, Müller-Putz GR. Decoding natural reach-and-grasp actions from human EEG. J Neural Eng. 2018 Feb;15(1):016005. doi: 10.1088/1741-2552/aa8911. PMID: 28853420.&lt;/p&gt;
