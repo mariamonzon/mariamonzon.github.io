@@ -301,7 +301,7 @@ We defined a window of interest for each movement trial of [-2 3] s with respect
 In addition, we also extracted 81 rest trials from inactivity periods with a duration of 5 seconds.&lt;/p&gt;
 &lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
 &lt;h3 id=&#34;vanilla-1d-network&#34;&gt;Vanilla 1D Network&lt;/h3&gt;
-&lt;p&gt;We aimed to design a single CNN architecture to accurately classify grasp actions from differente EEG decoding modalitites, while  being as compact and simple as possible. We try a simple vanilla 1D convolutional neural network based on 1D temporal convolutions in order to encapsulate EEG feature extraction methodologies used in traditional classiers &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;
+&lt;p&gt;We aimed to design a single convolutional neural network (CNN) architecture to accurately classify grasp actions from differente EEG decoding modalitites, while  being as compact and simple as possible. We try a simple vanilla 1D convolutional neural network based on 1D temporal convolutions in order to encapsulate EEG feature extraction methodologies used in traditional classiers &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;
 
 
 
@@ -326,9 +326,14 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;eegnet-3httpsiopscienceioporgarticle1010881741-2552aace8c&#34;&gt;EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;EEGNet has three convolution layers: (a) a one-dimensional convolution analogous to temporal band-pass filtering, (b) a depthwise convolution to perform spatial filtering, and (c) a separable convolution to identify temporal patterns across the previous filters.&lt;/p&gt;
+&lt;p&gt;EEGNet is a compact CNN designed for BCIs that can be trained with very limited data. The architecture has three convolution layers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a one-dimensional convolution analogous to temporal band-pass filtering&lt;/li&gt;
+&lt;li&gt;a depthwise convolution to perform spatial filtering,&lt;/li&gt;
+&lt;li&gt;a separable convolution to identify temporal patterns across the previous filters&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;htnet-architecture-4httpsdoiorg1010881741-2552abda0b&#34;&gt;HTNet architecture &lt;a href=&#34;https://doi.org/10.1088/1741-2552/abda0b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[4]&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;HTNet builds upon EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;, a compact convolutional neural network.  For HTNet, The authos added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.&lt;/p&gt;
+&lt;p&gt;HTNet builds upon EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;. The authors added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.  The temporal convolution and Hilbert transform layers generate data-driven spectral features that can then be projected from electrodes onto common regions of interest using a predefined weight matrix.&lt;/p&gt;
 &lt;h3 id=&#34;training-strategies&#34;&gt;Training Strategies&lt;/h3&gt;
 &lt;p&gt;Classiffcation results are reported for differente training stratesgies: within-subject and cross-subject.
 
