@@ -155,7 +155,7 @@ In order to assess if the policy represents a better utility than random, a simp
       <description>&lt;p&gt;Decoding three different executed reach-and-grasp actions utilizing their electroencephalogram (EEG) recording from different electrodes is of crutial significance for the rehabilitation of hand functions of patients with motor disorders &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;.
 Despite the high freedom of the human hand movements, most actions of daily life can be executed incorporating only palmar, lateral and grasp.  Recent studies have already shown that neural correlates of natural reach-and-grasp actions can be identified in the EEG &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Deep Learning has recently achieved promising results in the field of Computer Vision and Biomedical Engineering. Therefore, this work aims to study the possibility of develop Deep learning based decoders to classify grasp actions based on EEG signals.  We have also studied the possibility of developing intersubject classifiers and transfer learning between the different subject technologies. For this purpose, different neural network architectures have been tested, single trial vs crop trial performance has been evaluated as well as the different training techniques: within-subject and inter-subject training.&lt;/p&gt;
-&lt;h2 id=&#34;eeg-introduction&#34;&gt;EEG Introduction&lt;/h2&gt;
+&lt;h3 id=&#34;1-eeg-introduction&#34;&gt;1-EEG Introduction&lt;/h3&gt;
 &lt;p&gt;The EEG is a cost-effective, non-invasive technique to examine brain activity linked to multiple neurocognitive processes that underlie human behavior. It consists of placing electrodes on the head to monitor the electrical activity produced when neurons fire. The EEG records and measures electrical signals of the human brain from multiple cortical areas. Therefore, EEG monitoring allows to quantify different types of brain waves, also known as neural oscillations.
 The standard pipeline followed to extract information is depicted in the next figure:&lt;/p&gt;
 &lt;p&gt;
@@ -182,7 +182,7 @@ The standard pipeline followed to extract information is depicted in the next fi
 Bitbrain. “Three important steps when processing EEG”, April 23, 2020, &lt;a href=&#34;https://www.bitbrain.com/blog/ai-eeg-data-processing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bitbrain.com/blog/ai-eeg-data-processing&lt;/a&gt;
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;dataset&#34;&gt;Dataset&lt;/h2&gt;
+&lt;h3 id=&#34;2-dataset&#34;&gt;2-Dataset&lt;/h3&gt;
 &lt;p&gt;In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at &lt;a href=&#34;http://bnci-horizon-2020.eu/database/data-sets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BNCI Horizon 2020&lt;/a&gt;. 
 The pre-recorded dataset contains 7 min runs, leading to 80 trials per condition (TPC) distributed over 4 runs / 20 trials for each reach-and-grasp condition and from a no-movement condition.
 The 45 right handed participants performed two self-initiated reach-and-grasp (palmar and lateral grasp) movement conditions.&lt;/p&gt;
@@ -214,12 +214,12 @@ The 45 right handed participants performed two self-initiated reach-and-grasp (p
 &lt;li&gt;Water-based electrodes recordings mobile and water-based electrodes EEG-Versatile™ system with 32 electrodes&lt;/li&gt;
 &lt;li&gt;Dry-electrodes recordings measured using the dry-electrodes EEG-Hero™ headset.  EEG was measured with 11 electrodes over the sensorimotor cortex.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;data-proprocesssing&#34;&gt;Data Proprocesssing&lt;/h3&gt;
+&lt;h4 id=&#34;data-proprocesssing&#34;&gt;Data Proprocesssing&lt;/h4&gt;
 &lt;p&gt;The EEG data processsing was analogous to the one in &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz. 
 We defined a window of interest for each movement trial of [-2 3] s with respect to the movement onset at second 0.
 In addition, we also extracted 81 rest trials from inactivity periods with a duration of 5 seconds.&lt;/p&gt;
-&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
-&lt;h3 id=&#34;vanilla-1d-network&#34;&gt;Vanilla 1D Network&lt;/h3&gt;
+&lt;h3 id=&#34;3-methods&#34;&gt;3-Methods&lt;/h3&gt;
+&lt;h4 id=&#34;vanilla-1d-network&#34;&gt;Vanilla 1D Network&lt;/h4&gt;
 &lt;p&gt;We aimed to design a single convolutional neural network (CNN) architecture to accurately classify grasp actions from differente EEG decoding modalitites, while  being as compact and simple as possible. We try a simple vanilla 1D convolutional neural network based on 1D temporal convolutions in order to encapsulate EEG feature extraction methodologies used in traditional classiers &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;
 
 
@@ -244,16 +244,16 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
       Overview of 1D CNN designed architecture. It contains a 1D convolution block layer followed by a temporal pooling and convolution kernel to extract features that are the input for the dense layer
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;eegnet-3httpsiopscienceioporgarticle1010881741-2552aace8c&#34;&gt;EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;eegnet-3httpsiopscienceioporgarticle1010881741-2552aace8c&#34;&gt;EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;EEGNet is a compact CNN designed for BCIs that can be trained with very limited data. The architecture has three convolution layers:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;a one-dimensional convolution analogous to temporal band-pass filtering&lt;/li&gt;
 &lt;li&gt;a depthwise convolution to perform spatial filtering,&lt;/li&gt;
 &lt;li&gt;a separable convolution to identify temporal patterns across the previous filters&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;htnet-architecture-4httpsdoiorg1010881741-2552abda0b&#34;&gt;HTNet architecture &lt;a href=&#34;https://doi.org/10.1088/1741-2552/abda0b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[4]&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;htnet-architecture-4httpsdoiorg1010881741-2552abda0b&#34;&gt;HTNet architecture &lt;a href=&#34;https://doi.org/10.1088/1741-2552/abda0b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[4]&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;HTNet builds upon EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;. The authors added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.  The temporal convolution and Hilbert transform layers generate data-driven spectral features that can then be projected from electrodes onto common regions of interest using a predefined weight matrix.&lt;/p&gt;
-&lt;h3 id=&#34;training-strategies&#34;&gt;Training Strategies&lt;/h3&gt;
+&lt;h4 id=&#34;training-strategies&#34;&gt;Training Strategies&lt;/h4&gt;
 &lt;p&gt;Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another technology and performing fine-tunning on the target technology.&lt;br&gt;
 The cross-validation strategy used is know as &amp;ldquo;leave one-subject-out&amp;rdquo;. Given the N subjects, The training subset is fromed by N - 1, while the remaining subject is used for testing.&lt;/p&gt;
 &lt;p&gt;
@@ -279,7 +279,7 @@ The cross-validation strategy used is know as &amp;ldquo;leave one-subject-out&a
       Test strategies for the evaluation of the resutls
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;data-augmentation&#34;&gt;Data Augmentation&lt;/h3&gt;
+&lt;h4 id=&#34;data-augmentation&#34;&gt;Data Augmentation&lt;/h4&gt;
 &lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data. 
 Data augmentation is especially useful for EEG signals where the limitation of small-scale datasets greatly affects the performance of classifiers. Still due to the variability of EEG and time-series nature, it is challenging to augment the data in the feature space. Based on the findings of &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;, we implemented an easy on-the-fly data augmentation that consist on band filtering the training data. The aim is to enforce the network to learn different features at different frequency bands.&lt;/p&gt;
 &lt;p&gt;
@@ -305,8 +305,8 @@ Data augmentation is especially useful for EEG signals where the limitation of s
       Overview of trainig pipeline methods
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h3 id=&#34;4-results&#34;&gt;4-Results&lt;/h3&gt;
+&lt;h3 id=&#34;5-references&#34;&gt;5-References&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt; Schwarz A, Ofner P, Pereira J, Sburlea AI, Müller-Putz GR. Decoding natural reach-and-grasp actions from human EEG. J Neural Eng. 2018 Feb;15(1):016005. doi: 10.1088/1741-2552/aa8911. PMID: 28853420.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt; Schwarz, A., Escolano, C., Montesano, L., &amp;amp; Müller-Putz, G. (2020). Analyzing and Decoding Natural Reach-and-Grasp Actions Using Gel, Water and Dry EEG Systems. Frontiers in Neuroscience, 14.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt; Lawhern V J, Solon A J, Waytowich N R, Gordon S M, Hung C P and Lance B J 2018 Eegnet: a compact convolutional neural network for EEG-based brain–computer interfaces J. Neural Eng. 15 056013&lt;/p&gt;
