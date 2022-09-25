@@ -937,8 +937,8 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
 <h4 id="htnet-architecture-4httpsdoiorg1010881741-2552abda0b">HTNet architecture <a href="https://doi.org/10.1088/1741-2552/abda0b" target="_blank" rel="noopener">[4]</a></h4>
 <p>HTNet builds upon EEGNet <a href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c" target="_blank" rel="noopener">[3]</a>. The authors added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.  The temporal convolution and Hilbert transform layers generate data-driven spectral features that can then be projected from electrodes onto common regions of interest using a predefined weight matrix.</p>
 <h4 id="training-strategies">Training Strategies</h4>
-<p>Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another technology and performing fine-tunning on the target technology.<br>
-The cross-validation strategy used is know as &ldquo;leave one-subject-out&rdquo;. Given the N subjects, The training subset is fromed by N - 1, while the remaining subject is used for testing.</p>
+<p>Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. The common cross-validation strategy used in EEG decoding is known as &ldquo;leave one-subject-out&rdquo;. Given the N subjects, the training subset is fromed by N - 1, while the remaining subject is used for testing.
+Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another recording technology.</p>
 <p>
 
 
@@ -957,7 +957,7 @@ The cross-validation strategy used is know as &ldquo;leave one-subject-out&rdquo
 
 <figure  id="figure-test-strategies-for-the-evaluation-of-the-resutls">
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/images/eeg-grasp-decoder/methods-training-strategy.png" alt="methods-training" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/methods-training-valdation-strategy.png" alt="methods-training" loading="lazy" data-zoomable /></div>
   </div><figcaption>
       Test strategies for the evaluation of the resutls
     </figcaption></figure>

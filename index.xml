@@ -335,8 +335,8 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
 &lt;h4 id=&#34;htnet-architecture-4httpsdoiorg1010881741-2552abda0b&#34;&gt;HTNet architecture &lt;a href=&#34;https://doi.org/10.1088/1741-2552/abda0b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[4]&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;HTNet builds upon EEGNet &lt;a href=&#34;https://iopscience.iop.org/article/10.1088/1741-2552/aace8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[3]&lt;/a&gt;. The authors added a Hilbert transform layer after this initial temporal convolution to compute relevant spectral power features using a data-driven filter-Hilbert.  The temporal convolution and Hilbert transform layers generate data-driven spectral features that can then be projected from electrodes onto common regions of interest using a predefined weight matrix.&lt;/p&gt;
 &lt;h4 id=&#34;training-strategies&#34;&gt;Training Strategies&lt;/h4&gt;
-&lt;p&gt;Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another technology and performing fine-tunning on the target technology.&lt;br&gt;
-The cross-validation strategy used is know as &amp;ldquo;leave one-subject-out&amp;rdquo;. Given the N subjects, The training subset is fromed by N - 1, while the remaining subject is used for testing.&lt;/p&gt;
+&lt;p&gt;Transfer learning techniques from the field of machine learning have been adopted also for EEG feature distribution for inter-subject variability. The common cross-validation strategy used in EEG decoding is known as &amp;ldquo;leave one-subject-out&amp;rdquo;. Given the N subjects, the training subset is fromed by N - 1, while the remaining subject is used for testing.
+Classiffcation results are reported for differente training stratesgies: within-subject, inter-subject and with pretraining in another recording technology.&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -355,7 +355,7 @@ The cross-validation strategy used is know as &amp;ldquo;leave one-subject-out&a
 
 &lt;figure  id=&#34;figure-test-strategies-for-the-evaluation-of-the-resutls&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-training-strategy.png&#34; alt=&#34;methods-training&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-training-valdation-strategy.png&#34; alt=&#34;methods-training&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Test strategies for the evaluation of the resutls
     &lt;/figcaption&gt;&lt;/figure&gt;
