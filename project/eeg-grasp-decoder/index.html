@@ -819,6 +819,47 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/mariamonzon/EEG-Grasp-DL-Decoding" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
 </div>
 
@@ -981,15 +1022,92 @@ Data augmentation is especially useful for EEG signals where the limitation of s
 
 
 
-<figure  id="figure-overview-of-trainig-pipeline-methods">
+<figure  id="figure-overview-of-training-pipeline-including-the-data-augmentation-method">
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img src="/images/eeg-grasp-decoder/methods-split-bands.png" alt="methods-augmentation" loading="lazy" data-zoomable /></div>
   </div><figcaption>
-      Overview of trainig pipeline methods
+      Overview of training pipeline including the data augmentation method
     </figcaption></figure>
 </p>
 <h3 id="4-results">4-Results</h3>
-<h3 id="5-references">5-References</h3>
+<p>In a single-trial multiclass based decoding approach, which incorporated both movement conditions and rest
+can be successfully decodes using Deep learning based decoders. 
+We performed a comparison on the decoding accuracy for single trial of 2 seconds on the state-of-the-art network architecture on the time of the study.  Table depicts the inter-participant classification results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-decoding-accuracy-on-single-trial-classification">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/results-architecture.png" alt="results-architecture" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Decoding accuracy on single trial classification
+    </figcaption></figure>
+</p>
+<p>The effect of cropping window duration was investigated. We can conlcude that longer signal windows show better performance.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-overview-of-training-pipeline-including-the-data-augmentation-method">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/results-cropping-window.png" alt="results-window" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Overview of training pipeline including the data augmentation method
+    </figcaption></figure>
+</p>
+<p>The best results were achieved when training the model with a cropped window T =[0,1] with overlapping strides 250ms. The models were pretrained in another recording technology resampled to 128 Hz with split frequencies data augmentation strategy. On average, best classification performance could be reached 1s after the movement onset.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-single-trial-decoding-performance-of-the-dry--and-water-electrodes-recordings">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/images/eeg-grasp-decoder/results-accuracy-time.png" alt="results-accuracy" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Single trial decoding performance of the dry- and water-electrodes recordings
+    </figcaption></figure>
+</p>
+<p>Despite the reduced number of channels of the dry electrodes recordings, the average performance was not decreased significantly as it can be seen in the above figure.</p>
+<h4 id="5-conclusion">5-Conclusion</h4>
+<p>This study confirmed that EEG based correlates of reach-and-grasp actions can be successfully identified  using Deep Leaning based decoders. We demonstrated that a simple, yet effective,  1D convolution CNN  can reach state-of-the-art neural decoders when and improve the results appliying the mmodes  to new participants, even when a different recording modality is used. Unfortunately, a direct comparison to other reach-and-grasp studies such as is difficult due significant differences in experimental setup and paradigm and hence cannot be made in a serious manner.</p>
+<h3 id="references">References</h3>
 <p><a href="https://pubmed.ncbi.nlm.nih.gov/28853420/" target="_blank" rel="noopener">[1]</a> Schwarz A, Ofner P, Pereira J, Sburlea AI, Müller-Putz GR. Decoding natural reach-and-grasp actions from human EEG. J Neural Eng. 2018 Feb;15(1):016005. doi: 10.1088/1741-2552/aa8911. PMID: 28853420.</p>
 <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full" target="_blank" rel="noopener">[2]</a> Schwarz, A., Escolano, C., Montesano, L., &amp; Müller-Putz, G. (2020). Analyzing and Decoding Natural Reach-and-Grasp Actions Using Gel, Water and Dry EEG Systems. Frontiers in Neuroscience, 14.</p>
 <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aace8c" target="_blank" rel="noopener">[3]</a> Lawhern V J, Solon A J, Waytowich N R, Gordon S M, Hung C P and Lance B J 2018 Eegnet: a compact convolutional neural network for EEG-based brain–computer interfaces J. Neural Eng. 15 056013</p>
