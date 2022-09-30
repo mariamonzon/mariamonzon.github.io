@@ -70,6 +70,8 @@
   <url>
     <loc>https://mariamonzon.com/publication-type/1/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://mariamonzon.com/tag/clinical-parameters/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://mariamonzon.com/publication/ismrm-motion-parameters/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://mariamonzon.com/publication_types/</loc><lastmod>2020-05-20T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
@@ -104,4 +106,8 @@
   <url>
     <loc>https://mariamonzon.com/tag/svm/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://mariamonzon.com/admin/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://mariamonzon.com/files/adaptive-frame-report/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/admin/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://mariamonzon.com/files/</loc><changefreq>weekly</changefreq></url></urlset>
