@@ -1535,6 +1535,45 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/files/adaptive-frame-report/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}&lt;/p&gt;
+&lt;p&gt;#paginator {
+display: none;
+text-align: center;
+margin-bottom: 10px;
+}&lt;/p&gt;
+&lt;p&gt;#loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}&lt;/p&gt;
+&lt;p&gt;#loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}&lt;/p&gt;
+&lt;p&gt;@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
