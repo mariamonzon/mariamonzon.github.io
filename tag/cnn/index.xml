@@ -5,12 +5,30 @@
     <link>https://mariamonzon.com/tag/cnn/</link>
       <atom:link href="https://mariamonzon.com/tag/cnn/index.xml" rel="self" type="application/rss+xml" />
     <description>CNN</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>CNN</title>
       <link>https://mariamonzon.com/tag/cnn/</link>
     </image>
+    
+    <item>
+      <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
+      <link>https://mariamonzon.com/publication/ismrm-motion-parameters/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/publication/ismrm-motion-parameters/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated Vessel Segmentation for 2D Phase Contrast MR Using Deep Learning</title>
+      <link>https://mariamonzon.com/publication/ismrm-segmentation/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://mariamonzon.com/publication/ismrm-segmentation/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
     
     <item>
       <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
@@ -227,24 +245,6 @@ for training, validation and testing will be provided by Siemens Healthineers.&a
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
-      <link>https://mariamonzon.com/publication/ismrm-motion-parameters/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/publication/ismrm-motion-parameters/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Automated Vessel Segmentation for 2D Phase Contrast MR Using Deep Learning</title>
-      <link>https://mariamonzon.com/publication/ismrm-segmentation/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/publication/ismrm-segmentation/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
