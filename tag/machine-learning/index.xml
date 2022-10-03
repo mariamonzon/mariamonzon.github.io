@@ -369,7 +369,7 @@ Furthermore, less data acquisition will also mean an energy saving in processing
 window.onload = function() {
 
 
-var url = &#34;https:\/\/mariamonzon.com\/&#34; + &#39;.\/adaptive_sampling_report_pdf\u0027.pdf\u0022&#39;;
+var url = &#34;https:\/\/mariamonzon.com\/&#34; + &#39;adaptive_sampling_report_pdf\u0027.pdf\u0022&#39;;
 
 var hidePaginator = &#34;&#34; === &#34;true&#34;;
 var hideLoader = &#34;&#34; === &#34;true&#34;;
