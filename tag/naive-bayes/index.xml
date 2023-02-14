@@ -82,7 +82,7 @@ A common step in ML is also feature selection, i.e selection of the features in 
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed. 
+&lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed.
 The most common evaluation method in classification is the so-called confusion matrix. The Matrix is represented for a binary classification although it can be extended to multiclass problem. The matrix represents the relation between correctly classified, i.e. true positives (TP)  and True Negatives (TN), and wrongly predicted samples , i.e. false negatives (FN) and false positives (FP)  for each class. The matrix can be displayed with absolute frequency values or normalized by each class total number of elements. The confusion matrix for the assignment are shown below:&lt;/p&gt;
 &lt;p&gt;
 
@@ -108,7 +108,7 @@ The most common evaluation method in classification is the so-called confusion m
 &lt;p&gt;From the confusion matrix to assess the the quality of the predictions further evaluation metrics can be derived, a ranged from 0 to 1 (represents the best possible score):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Accuracy: metric of all the correctly classified samples over the total number of samples that asses the overall performance of the model 
+&lt;p&gt;Accuracy: metric of all the correctly classified samples over the total number of samples that asses the overall performance of the model
 
 $$ Accuracy = \frac{TP+TN}{TTP+TN+FP+FN}$$ 
 &lt;/p&gt;
@@ -126,7 +126,7 @@ $$ Recall = \frac{TP}{TP+FN}$$
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;F1-score: is the harmonic mean between precision (P) and recall (R) and asses the incorrectly predicted samples, especially in class imbalanced problems 
+&lt;p&gt;F1-score: is the harmonic mean between precision (P) and recall (R) and asses the incorrectly predicted samples, especially in class imbalanced problems
 
 $$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
 &lt;/p&gt;
