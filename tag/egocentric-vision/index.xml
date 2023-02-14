@@ -37,10 +37,10 @@ nd base our analysis on data extracted from datasheets. Our energy and memory mo
 both sensing components, i.e., the cmos sensor, and processing, i.e., the microcontroller
 to process the deep neural network.&lt;/p&gt;
 &lt;p&gt;The clear advantage of an adaptive frame rate is saving energy as the camera will not be
-acquiring data continuously. 
+acquiring data continuously.
 Benefits from our method will be longer recording sessions, smaller battery employment or smaller
 storage space usage. This would help to overcome the limitations of the video recording,
-in terms of power consumption, while maintaining acceptable performance. 
+in terms of power consumption, while maintaining acceptable performance.
 Furthermore, less data acquisition will also mean an energy saving in processing.&lt;/p&gt;
 </description>
     </item>

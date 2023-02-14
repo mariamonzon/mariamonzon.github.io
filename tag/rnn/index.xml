@@ -17,11 +17,11 @@
       <link>https://mariamonzon.com/project/voice-classifier-app/</link>
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/voice-classifier-app/</guid>
-      <description>&lt;p&gt;This project aim is to embeed a sound classification moden into simple android app for learning purposes. The model that classify 2-second audio samples is a small convolutional neural network. 
+      <description>&lt;p&gt;This project aim is to embeed a sound classification moden into simple android app for learning purposes. The model that classify 2-second audio samples is a small convolutional neural network.
 Sound classification is a machine learning task where you input some sound to a machine learning model to categorize it into predefined categories such as singing and speech. There are already many applications of sound classification.&lt;/p&gt;
 &lt;h2 id=&#34;__dataset__&#34;&gt;&lt;strong&gt;Dataset&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;The first step to develop the model is to find a suitable dataset. For the siging database, the&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://smcnus.comp.nus.edu.sg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUS-48E Sung and Spoken Corpus&lt;/a&gt; developed at Sound and Music Computing Laboratory at National University of Singapore was used. 
+&lt;p&gt;&lt;a href=&#34;https://smcnus.comp.nus.edu.sg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUS-48E Sung and Spoken Corpus&lt;/a&gt; developed at Sound and Music Computing Laboratory at National University of Singapore was used.
 The corpus is a 169-min collection of audio recordings of the sung and spoken lyrics of 48 (20 unique) English songs by 12 subjects and a complete set of transcriptions and duration annotations at the phone-level for all recordings of sung lyrics, comprising 25,474 phone instances.&lt;/p&gt;
 &lt;p&gt;The  training datasetwas further pre-process by convert them to the WAV format and splitting them in 2 seconds window.&lt;/p&gt;
 &lt;p&gt;

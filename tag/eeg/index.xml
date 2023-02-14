@@ -48,7 +48,7 @@ The standard pipeline followed to extract information is depicted in the next fi
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;2-dataset&#34;&gt;2-Dataset&lt;/h3&gt;
-&lt;p&gt;In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at &lt;a href=&#34;http://bnci-horizon-2020.eu/database/data-sets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BNCI Horizon 2020&lt;/a&gt;. 
+&lt;p&gt;In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at &lt;a href=&#34;http://bnci-horizon-2020.eu/database/data-sets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BNCI Horizon 2020&lt;/a&gt;.
 The pre-recorded dataset contains 7 min runs, leading to 80 trials per condition (TPC) distributed over 4 runs / 20 trials for each reach-and-grasp condition and from a no-movement condition.
 The 45 right handed participants performed two self-initiated reach-and-grasp (palmar and lateral grasp) movement conditions.&lt;/p&gt;
 &lt;p&gt;
@@ -80,7 +80,7 @@ The 45 right handed participants performed two self-initiated reach-and-grasp (p
 &lt;li&gt;Dry-electrodes recordings measured using the dry-electrodes EEG-Hero™ headset.  EEG was measured with 11 electrodes over the sensorimotor cortex.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;data-proprocesssing&#34;&gt;Data Proprocesssing&lt;/h4&gt;
-&lt;p&gt;The EEG data processsing was analogous to the one in &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz. 
+&lt;p&gt;The EEG data processsing was analogous to the one in &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz.
 We defined a window of interest for each movement trial of [-2 3] s with respect to the movement onset at second 0.
 In addition, we also extracted 81 rest trials from inactivity periods with a duration of 5 seconds.&lt;/p&gt;
 &lt;h3 id=&#34;3-methods&#34;&gt;3-Methods&lt;/h3&gt;
@@ -145,7 +145,7 @@ Classiffcation results are reported for differente training stratesgies: within-
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;data-augmentation&#34;&gt;Data Augmentation&lt;/h4&gt;
-&lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data. 
+&lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data.
 Data augmentation is especially useful for EEG signals where the limitation of small-scale datasets greatly affects the performance of classifiers. Still due to the variability of EEG and time-series nature, it is challenging to augment the data in the feature space. Based on the findings of &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;, we implemented an easy on-the-fly data augmentation that consist on band filtering the training data. The aim is to enforce the network to learn different features at different frequency bands.&lt;/p&gt;
 &lt;p&gt;
 
@@ -172,7 +172,7 @@ Data augmentation is especially useful for EEG signals where the limitation of s
 &lt;/p&gt;
 &lt;h3 id=&#34;4-results&#34;&gt;4-Results&lt;/h3&gt;
 &lt;p&gt;In a single-trial multiclass based decoding approach, which incorporated both movement conditions and rest
-can be successfully decodes using Deep learning based decoders. 
+can be successfully decodes using Deep learning based decoders.
 We performed a comparison on the decoding accuracy for single trial of 2 seconds on the state-of-the-art network architecture on the time of the study.  Table depicts the inter-participant classification results.
 
 

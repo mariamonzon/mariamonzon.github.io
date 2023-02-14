@@ -17,11 +17,11 @@
       <link>https://mariamonzon.com/project/voice-classifier-app/</link>
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/voice-classifier-app/</guid>
-      <description>&lt;p&gt;This project aim is to embeed a sound classification moden into simple android app for learning purposes. The model that classify 2-second audio samples is a small convolutional neural network. 
+      <description>&lt;p&gt;This project aim is to embeed a sound classification moden into simple android app for learning purposes. The model that classify 2-second audio samples is a small convolutional neural network.
 Sound classification is a machine learning task where you input some sound to a machine learning model to categorize it into predefined categories such as singing and speech. There are already many applications of sound classification.&lt;/p&gt;
 &lt;h2 id=&#34;__dataset__&#34;&gt;&lt;strong&gt;Dataset&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;The first step to develop the model is to find a suitable dataset. For the siging database, the&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://smcnus.comp.nus.edu.sg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUS-48E Sung and Spoken Corpus&lt;/a&gt; developed at Sound and Music Computing Laboratory at National University of Singapore was used. 
+&lt;p&gt;&lt;a href=&#34;https://smcnus.comp.nus.edu.sg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NUS-48E Sung and Spoken Corpus&lt;/a&gt; developed at Sound and Music Computing Laboratory at National University of Singapore was used.
 The corpus is a 169-min collection of audio recordings of the sung and spoken lyrics of 48 (20 unique) English songs by 12 subjects and a complete set of transcriptions and duration annotations at the phone-level for all recordings of sung lyrics, comprising 25,474 phone instances.&lt;/p&gt;
 &lt;p&gt;The  training datasetwas further pre-process by convert them to the WAV format and splitting them in 2 seconds window.&lt;/p&gt;
 &lt;p&gt;
@@ -134,7 +134,7 @@ The standard pipeline followed to extract information is depicted in the next fi
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h3 id=&#34;2-dataset&#34;&gt;2-Dataset&lt;/h3&gt;
-&lt;p&gt;In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at &lt;a href=&#34;http://bnci-horizon-2020.eu/database/data-sets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BNCI Horizon 2020&lt;/a&gt;. 
+&lt;p&gt;In a cue-guided experiment, 15 healthy individuals were asked to perform reach-and-grasp actions using daily life objects.  The dataset is publicly available at &lt;a href=&#34;http://bnci-horizon-2020.eu/database/data-sets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BNCI Horizon 2020&lt;/a&gt;.
 The pre-recorded dataset contains 7 min runs, leading to 80 trials per condition (TPC) distributed over 4 runs / 20 trials for each reach-and-grasp condition and from a no-movement condition.
 The 45 right handed participants performed two self-initiated reach-and-grasp (palmar and lateral grasp) movement conditions.&lt;/p&gt;
 &lt;p&gt;
@@ -166,7 +166,7 @@ The 45 right handed participants performed two self-initiated reach-and-grasp (p
 &lt;li&gt;Dry-electrodes recordings measured using the dry-electrodes EEG-Hero™ headset.  EEG was measured with 11 electrodes over the sensorimotor cortex.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;data-proprocesssing&#34;&gt;Data Proprocesssing&lt;/h4&gt;
-&lt;p&gt;The EEG data processsing was analogous to the one in &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz. 
+&lt;p&gt;The EEG data processsing was analogous to the one in &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;. All the modalities data were filtered with a zero-phase 4th order Butterworth filter with a cut-off frequency of 0.3 and resample to 128 Hz.
 We defined a window of interest for each movement trial of [-2 3] s with respect to the movement onset at second 0.
 In addition, we also extracted 81 rest trials from inactivity periods with a duration of 5 seconds.&lt;/p&gt;
 &lt;h3 id=&#34;3-methods&#34;&gt;3-Methods&lt;/h3&gt;
@@ -231,7 +231,7 @@ Classiffcation results are reported for differente training stratesgies: within-
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;data-augmentation&#34;&gt;Data Augmentation&lt;/h4&gt;
-&lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data. 
+&lt;p&gt;Data augmentation refers to techniques used to increase the amount of data by slightly modifying training data.
 Data augmentation is especially useful for EEG signals where the limitation of small-scale datasets greatly affects the performance of classifiers. Still due to the variability of EEG and time-series nature, it is challenging to augment the data in the feature space. Based on the findings of &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;, we implemented an easy on-the-fly data augmentation that consist on band filtering the training data. The aim is to enforce the network to learn different features at different frequency bands.&lt;/p&gt;
 &lt;p&gt;
 
@@ -258,7 +258,7 @@ Data augmentation is especially useful for EEG signals where the limitation of s
 &lt;/p&gt;
 &lt;h3 id=&#34;4-results&#34;&gt;4-Results&lt;/h3&gt;
 &lt;p&gt;In a single-trial multiclass based decoding approach, which incorporated both movement conditions and rest
-can be successfully decodes using Deep learning based decoders. 
+can be successfully decodes using Deep learning based decoders.
 We performed a comparison on the decoding accuracy for single trial of 2 seconds on the state-of-the-art network architecture on the time of the study.  Table depicts the inter-participant classification results.
 
 
@@ -356,7 +356,7 @@ from Cardiac Magnetic Resonance (CMR) images. However, in clinical
 setting valve motion modeling usually needs a manual intervention to lo-
 calize the valvular plane. We propose two chained Convolutional Neural
 Networks (CNN) for automatic tracking of mitral valve-annulus land-
-marks on time-resolved 2-chamber and 4-chamber CMR images. 
+marks on time-resolved 2-chamber and 4-chamber CMR images.
 The first CNN is trained to detect the region of interest and the second to
 track the landmarks along the cardiac cycle. The presented deep learn-
 ing system has high accuracy in terms of temporal landmark tracking
@@ -372,10 +372,10 @@ tion and allowing statistical analysis over a large number of datasets.&lt;/p&gt
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/valve-cardiac-motion-assesment/</guid>
       <description>&lt;p&gt;The presented work aimed to develop a novel method for the task of valve motion
-assessment for prospective slice tracking in CMR temporal image (CINE) acquisition. 
+assessment for prospective slice tracking in CMR temporal image (CINE) acquisition.
 The objective this thesis &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; was to evaluate deep learning-based landmarks tracking methods to extract the
 motion of the mitral valves throughout the cardiac cycle on time-resolved CMR four-chamber-
-view (4CHV) images. The fully automated CNN based algorithm would improve the current slice following acquisition workflow, which needs from manual user intervention. 
+view (4CHV) images. The fully automated CNN based algorithm would improve the current slice following acquisition workflow, which needs from manual user intervention.
 The automatic imaging slice tracking will enable a more precise morphology and flow estimation, potentially
 improving the diagnosis of diastolic dysfunction. During this project, an automatic deep learning algorithm using landmark detection was developed.&lt;/p&gt;
 &lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
@@ -421,7 +421,7 @@ images acquired in long-axis planes, but for our work we only selected the 4CHV 
 The sequence of 4CHV CINE CMR are acquired on multiple 1.5T MRI scanners from
 different vendors (Philips, Siemens, GE). The mean pixel spacing of all selected datasets
 is 1.49 + 0.28 mm/pixel. Additionally the annotated dataset contains anatomical landmarks, i.e.
-the mitral valve position at each temporal aframe nnotated by an experienced analyst. 
+the mitral valve position at each temporal aframe nnotated by an experienced analyst.
 As a preprocessing step, the CINE series were interpolated into a fixed and temporal resolution and
 horizontally flipped to have all the images oriented with the apex of the heart upwards. Finally,the
 input images intensity were normalized to 0-1 range values. After cleaning the data, the dataset
@@ -452,7 +452,7 @@ contrast enhancement and Gaussian blurring.&lt;/p&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;system-overview&#34;&gt;System Overview&lt;/h2&gt;
 &lt;p&gt;The motion assesment system is composed of four main stages. The preprocessed CINE dataset are forwarded as input to a convolutional based neural network (CNN).
-The final proposed system comprises two chained CNNs based on heatmap regression approach: Localization Network + Landmark Detection Network. The task of the localization CNN model is to detect the landmarks only in the first temporal frame of the full 4CHV CINE series. The complete system is designed to regress the mitral valve-annulus landmarks for each time-frame points. 
+The final proposed system comprises two chained CNNs based on heatmap regression approach: Localization Network + Landmark Detection Network. The task of the localization CNN model is to detect the landmarks only in the first temporal frame of the full 4CHV CINE series. The complete system is designed to regress the mitral valve-annulus landmarks for each time-frame points.
 Finally, the valvular plane motion can be derived from the two predicted landmark distance. The predicted temporal coordinates are translated into mm-space.&lt;/p&gt;
 &lt;p&gt;
 
@@ -514,7 +514,7 @@ location. The additional step outputs subpixel maxima and therefore predicts a s
 motion.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;conclusion-and-outlook&#34;&gt;Conclusion and Outlook&lt;/h2&gt;
-&lt;p&gt;The proposed system enables the valve tracking detection over time and therefore smooth valve motion assessment. 
+&lt;p&gt;The proposed system enables the valve tracking detection over time and therefore smooth valve motion assessment.
 Future work would focus on extension on the algorithm to 2CHV valve landmark detection. Evaluation with more test data
 and further refinement of the network. An integration of a single CNN could be convenient for faster inference time. Finally, when the validity of the method is proved , the scanner integration would be the next step.&lt;/p&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;

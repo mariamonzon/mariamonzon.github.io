@@ -883,10 +883,10 @@
 
     <div class="article-style">
       <p>The presented work aimed to develop a novel method for the task of valve motion
-assessment for prospective slice tracking in CMR temporal image (CINE) acquisition. 
+assessment for prospective slice tracking in CMR temporal image (CINE) acquisition.
 The objective this thesis <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> was to evaluate deep learning-based landmarks tracking methods to extract the
 motion of the mitral valves throughout the cardiac cycle on time-resolved CMR four-chamber-
-view (4CHV) images. The fully automated CNN based algorithm would improve the current slice following acquisition workflow, which needs from manual user intervention. 
+view (4CHV) images. The fully automated CNN based algorithm would improve the current slice following acquisition workflow, which needs from manual user intervention.
 The automatic imaging slice tracking will enable a more precise morphology and flow estimation, potentially
 improving the diagnosis of diastolic dysfunction. During this project, an automatic deep learning algorithm using landmark detection was developed.</p>
 <h2 id="motivation">Motivation</h2>
@@ -932,7 +932,7 @@ images acquired in long-axis planes, but for our work we only selected the 4CHV 
 The sequence of 4CHV CINE CMR are acquired on multiple 1.5T MRI scanners from
 different vendors (Philips, Siemens, GE). The mean pixel spacing of all selected datasets
 is 1.49 + 0.28 mm/pixel. Additionally the annotated dataset contains anatomical landmarks, i.e.
-the mitral valve position at each temporal aframe nnotated by an experienced analyst. 
+the mitral valve position at each temporal aframe nnotated by an experienced analyst.
 As a preprocessing step, the CINE series were interpolated into a fixed and temporal resolution and
 horizontally flipped to have all the images oriented with the apex of the heart upwards. Finally,the
 input images intensity were normalized to 0-1 range values. After cleaning the data, the dataset
@@ -963,7 +963,7 @@ contrast enhancement and Gaussian blurring.</p>
 </p>
 <h2 id="system-overview">System Overview</h2>
 <p>The motion assesment system is composed of four main stages. The preprocessed CINE dataset are forwarded as input to a convolutional based neural network (CNN).
-The final proposed system comprises two chained CNNs based on heatmap regression approach: Localization Network + Landmark Detection Network. The task of the localization CNN model is to detect the landmarks only in the first temporal frame of the full 4CHV CINE series. The complete system is designed to regress the mitral valve-annulus landmarks for each time-frame points. 
+The final proposed system comprises two chained CNNs based on heatmap regression approach: Localization Network + Landmark Detection Network. The task of the localization CNN model is to detect the landmarks only in the first temporal frame of the full 4CHV CINE series. The complete system is designed to regress the mitral valve-annulus landmarks for each time-frame points.
 Finally, the valvular plane motion can be derived from the two predicted landmark distance. The predicted temporal coordinates are translated into mm-space.</p>
 <p>
 
@@ -1025,7 +1025,7 @@ location. The additional step outputs subpixel maxima and therefore predicts a s
 motion.</li>
 </ul>
 <h2 id="conclusion-and-outlook">Conclusion and Outlook</h2>
-<p>The proposed system enables the valve tracking detection over time and therefore smooth valve motion assessment. 
+<p>The proposed system enables the valve tracking detection over time and therefore smooth valve motion assessment.
 Future work would focus on extension on the algorithm to 2CHV valve landmark detection. Evaluation with more test data
 and further refinement of the network. An integration of a single CNN could be convenient for faster inference time. Finally, when the validity of the method is proved , the scanner integration would be the next step.</p>
 <h2 id="references">References</h2>
@@ -1354,7 +1354,7 @@ for training, validation and testing will be provided by Siemens Healthineers.&#
 
   
   <p class="powered-by copyright-license-text">
-    © 2022 Maria Monzon. This work is licensed under <!-- raw HTML omitted -->CC BY NC ND 4.0<!-- raw HTML omitted -->
+    © 2023 Maria Monzon. This work is licensed under <!-- raw HTML omitted -->CC BY NC ND 4.0<!-- raw HTML omitted -->
   </p>
   
 
@@ -1396,7 +1396,7 @@ for training, validation and testing will be provided by Siemens Healthineers.&#
   
 
 
-<script src="/js/vendor-bundle.min.46271ef31da3f018e9cd1b59300aa265.js"></script>
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
 
 
@@ -1479,7 +1479,7 @@ for training, validation and testing will be provided by Siemens Healthineers.&#
   
 
 
-<script src="/en/js/wowchemy.min.a6238d5886fa4a2f7cf92df25709326f.js"></script>
+<script src="/en/js/wowchemy.min.54dd6e4d8f2e4b1d098381b57f18dd83.js"></script>
 
 
 

@@ -18,7 +18,7 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</guid>
       <description>&lt;p&gt;Out-of hospital cardiac arrest (OHCA) is one of the major causes of death in developed countries. Resuscitation guidelines recommend different treatments depending on the heart rhythm of the patient. The objective of this work is to develop a machine learning algorithm based on the ECG signal to automatically label heart rhythms in resuscitation episodes, a key tool for the retrospectively evaluation and improvement of the quality treatment. This work would help to systematise the annotation of databases since manual annotation of rhythms is a time-consuming task which can be an obstacle for handling large data sets.&lt;/p&gt;
-&lt;p&gt;The starting point of this project was a database composed of 1631 intervals of 3 seconds taken from a larger database containing OHCA 298 episodes. To review the ECG segments, a graphical interface (GUI) was developed which allows the display of the ECGs classified by the type of arrhythmia: 
+&lt;p&gt;The starting point of this project was a database composed of 1631 intervals of 3 seconds taken from a larger database containing OHCA 298 episodes. To review the ECG segments, a graphical interface (GUI) was developed which allows the display of the ECGs classified by the type of arrhythmia:
 asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fibrillation (VF), pulseless electrical activity (PEA) pulse generating rhythms (PR).&lt;/p&gt;
 &lt;p&gt;
 
