@@ -1,10 +1,19 @@
-@inproceedings{faucris.258399121,
- author = {Monzon, Maria and Yoon, Seung Su and Fischer, Carola and Maier, Andreas and Wetzl, Jens and Giese, Daniel},
- booktitle = {International Society for Magnetic Resonance in Medicine (ISMRM) 29th Annual Meeting & Exhibition},
- date = {2021-05-15/2021-05-20},
- peerreviewed = {unknown},
- title = {{Fully} automatic extraction of mitral valve annulus motion parameters on long axis {CINE} {CMR} using deep learning},
- url = {https://index.mirasmart.com/ISMRM2021/PDFfiles/2664.html},
- venue = {Virtual},
- year = {2021}
+@article{YOON2023110978,
+title = {Fully automated AI-based cardiac motion parameter extraction - application to mitral and tricuspid valves on long-axis cine MR images},
+journal = {European Journal of Radiology},
+volume = {166},
+pages = {110978},
+year = {2023},
+issn = {0720-048X},
+doi = {https://doi.org/10.1016/j.ejrad.2023.110978},
+url = {https://www.sciencedirect.com/science/article/pii/S0720048X23002929},
+author = {Seung Su Yoon and Carola Fischer and Daniel Amsel and Maria Monzon and Solenn Toupin and Théo Pezel and Jérôme Garot and Jens Wetzl and Andreas Maier and Daniel Giese},
+keywords = {CMR, AI, Mitral valve motion, Tricuspid valve motion, Longitudinal shortening},
+abstract = {Purpose
+In cardiac MRI, valve motion parameters can be useful for the diagnosis of cardiac dysfunction. In this study, a fully automated AI-based valve tracking system was developed and evaluated on 2- or 4-chamber view cine series on a large cardiac MR dataset. Automatically derived motion parameters include atrioventricular plane displacement (AVPD), velocities (AVPV), mitral or tricuspid annular plane systolic excursion (MAPSE, TAPSE), or longitudinal shortening (LS).
+Method
+Two sequential neural networks with an intermediate processing step are applied to localize the target and track the landmarks throughout the cardiac cycle. Initially, a localisation network is used to perform heatmap regression of the target landmarks, such as mitral, tricuspid valve annulus as well as apex points. Then, a registration network is applied to track these landmarks using deformation fields. Based on these outputs, motion parameters were derived.
+Results
+The accuracy of the system resulted in deviations of 1.44 ± 1.32 mm, 1.51 ± 1.46 cm/s, 2.21 ± 1.81 mm, 2.40 ± 1.97 mm, 2.50 ± 2.06 mm for AVPD, AVPV, MAPSE, TAPSE and LS, respectively. Application on a large patient database (N = 5289) revealed a mean MAPSE and LS of 9.5 ± 3.0 mm and 15.9 ± 3.9 % on 2-chamber and 4-chamber views, respectively. A mean TAPSE and LS of 13.4 ± 4.7 mm and 21.4 ± 6.9 % was measured.
+Conclusion: The results demonstrate the versatility of the proposed system for automatic extraction of various valve-related motion parameters.}
 }
