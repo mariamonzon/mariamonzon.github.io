@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Maria Monzon</title>
-    <link>https://mariamonzon.com/publication-type/2/</link>
-      <atom:link href="https://mariamonzon.com/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mariamonzon.github.io/publication-type/2/</link>
+      <atom:link href="https://mariamonzon.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mariamonzon.github.io/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>https://mariamonzon.com/publication-type/2/</link>
+      <link>https://mariamonzon.github.io/publication-type/2/</link>
     </image>
     
     <item>
       <title>Fully automated AI-based cardiac motion parameter extraction – application to mitral and tricuspid valves on long-axis cine MR images</title>
-      <link>https://mariamonzon.com/publication/elsevier-motion-parameters/</link>
+      <link>https://mariamonzon.github.io/publication/elsevier-motion-parameters/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/publication/elsevier-motion-parameters/</guid>
+      <guid>https://mariamonzon.github.io/publication/elsevier-motion-parameters/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning | Maria Monzon</title>
-    <link>https://mariamonzon.com/tag/machine-learning/</link>
-      <atom:link href="https://mariamonzon.com/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mariamonzon.github.io/tag/machine-learning/</link>
+      <atom:link href="https://mariamonzon.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Machine Learning</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mariamonzon.github.io/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>Machine Learning</title>
-      <link>https://mariamonzon.com/tag/machine-learning/</link>
+      <link>https://mariamonzon.github.io/tag/machine-learning/</link>
     </image>
     
     <item>
       <title>Deep Learning based reach-and-grasp EEG decoder</title>
-      <link>https://mariamonzon.com/project/eeg-grasp-decoder/</link>
+      <link>https://mariamonzon.github.io/project/eeg-grasp-decoder/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/eeg-grasp-decoder/</guid>
+      <guid>https://mariamonzon.github.io/project/eeg-grasp-decoder/</guid>
       <description>&lt;p&gt;Decoding three different executed reach-and-grasp actions utilizing their electroencephalogram (EEG) recording from different electrodes is of crutial significance for the rehabilitation of hand functions of patients with motor disorders &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;.
 Despite the high freedom of the human hand movements, most actions of daily life can be executed incorporating only palmar, lateral and grasp.  Recent studies have already shown that neural correlates of natural reach-and-grasp actions can be identified in the EEG &lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/28853420/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[2]&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Deep Learning has recently achieved promising results in the field of Computer Vision and Biomedical Engineering. Therefore, this work aims to study the possibility of develop Deep learning based decoders to classify grasp actions based on EEG signals.  We have also studied the possibility of developing intersubject classifiers and transfer learning between the different subject technologies. For this purpose, different neural network architectures have been tested, single trial vs crop trial performance has been evaluated as well as the different training techniques: within-subject and inter-subject training.&lt;/p&gt;
@@ -41,7 +41,7 @@ The standard pipeline followed to extract information is depicted in the next fi
 
 &lt;figure  id=&#34;figure-eeg-standard-decoding-pipeline-adapted-from-bitbrainthree-important-steps-when-processing-eeg-april-23-2020-httpswwwbitbraincomblogai-eeg-data-processing&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-eeg-decoding.png&#34; alt=&#34;methods-eeg-decoding&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/methods-eeg-decoding.png&#34; alt=&#34;methods-eeg-decoding&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       EEG standard decoding pipeline. Adapted from Bitbrain.
 &amp;lsquo;Three important steps when processing EEG&amp;rsquo;, April 23, 2020, &lt;a href=&#34;https://www.bitbrain.com/blog/ai-eeg-data-processing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.bitbrain.com/blog/ai-eeg-data-processing&lt;/a&gt;
@@ -69,7 +69,7 @@ The 45 right handed participants performed two self-initiated reach-and-grasp (p
 
 &lt;figure  id=&#34;figure-reach-and-grasp-movement-decoding-from-eeg-with-gel-water-and-dry-electrodes-dataset-experimental-set-up-2httpswwwfrontiersinorgarticles103389fnins202000849full&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/grasp-dataset-definition.png&#34; alt=&#34;grasp-task&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/grasp-dataset-definition.png&#34; alt=&#34;grasp-task&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Reach and Grasp movement decoding from EEG with gel, water and dry electrodes dataset experimental set-up &lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fnins.2020.00849/full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2&lt;/a&gt;
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -104,7 +104,7 @@ In addition, we also extracted 81 rest trials from inactivity periods with a dur
 
 &lt;figure  id=&#34;figure-overview-of-1d-cnn-designed-architecture-it-contains-a-1d-convolution-block-layer-followed-by-a-temporal-pooling-and-convolution-kernel-to-extract-features-that-are-the-input-for-the-dense-layer&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/network-description.png&#34; alt=&#34;methods-eeg-network&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/network-description.png&#34; alt=&#34;methods-eeg-network&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Overview of 1D CNN designed architecture. It contains a 1D convolution block layer followed by a temporal pooling and convolution kernel to extract features that are the input for the dense layer
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -139,7 +139,7 @@ Classiffcation results are reported for differente training stratesgies: within-
 
 &lt;figure  id=&#34;figure-test-strategies-for-the-evaluation-of-the-resutls&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-training-valdation-strategy.png&#34; alt=&#34;methods-training&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/methods-training-valdation-strategy.png&#34; alt=&#34;methods-training&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Test strategies for the evaluation of the resutls
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -165,7 +165,7 @@ Data augmentation is especially useful for EEG signals where the limitation of s
 
 &lt;figure  id=&#34;figure-overview-of-training-pipeline-including-the-data-augmentation-method&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/methods-split-bands.png&#34; alt=&#34;methods-augmentation&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/methods-split-bands.png&#34; alt=&#34;methods-augmentation&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Overview of training pipeline including the data augmentation method
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -192,7 +192,7 @@ We performed a comparison on the decoding accuracy for single trial of 2 seconds
 
 &lt;figure  id=&#34;figure-decoding-accuracy-on-single-trial-classification&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/results-architecture.png&#34; alt=&#34;results-architecture&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/results-architecture.png&#34; alt=&#34;results-architecture&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Decoding accuracy on single trial classification
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -216,7 +216,7 @@ We performed a comparison on the decoding accuracy for single trial of 2 seconds
 
 &lt;figure  id=&#34;figure-overview-of-training-pipeline-including-the-data-augmentation-method&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/results-cropping-window.png&#34; alt=&#34;results-window&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/results-cropping-window.png&#34; alt=&#34;results-window&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Overview of training pipeline including the data augmentation method
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -240,7 +240,7 @@ We performed a comparison on the decoding accuracy for single trial of 2 seconds
 
 &lt;figure  id=&#34;figure-single-trial-decoding-performance-of-the-dry--and-water-electrodes-recordings&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/eeg-grasp-decoder/results-accuracy-time.png&#34; alt=&#34;results-accuracy&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/eeg-grasp-decoder/results-accuracy-time.png&#34; alt=&#34;results-accuracy&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Single trial decoding performance of the dry- and water-electrodes recordings
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -259,9 +259,9 @@ Journal of Neural Engineering. &lt;a href=&#34;https://doi.org/10.1088/1741-2552
     
     <item>
       <title>Fully automatic extraction of mitral valve annulus motion parameters on long axis CINE CMR using deep learning</title>
-      <link>https://mariamonzon.com/project/cardiac-parameter-extraction/</link>
+      <link>https://mariamonzon.github.io/project/cardiac-parameter-extraction/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/cardiac-parameter-extraction/</guid>
+      <guid>https://mariamonzon.github.io/project/cardiac-parameter-extraction/</guid>
       <description>&lt;p&gt;Diastolic dysfunction is an important cause of cardiac insuf-
 ficiency, defined as a malfunctioning filling of the heart during diastole.
 The analysis of mitral valve motion is known to be relevant in the diagno-
@@ -282,9 +282,9 @@ tion and allowing statistical analysis over a large number of datasets.&lt;/p&gt
     
     <item>
       <title>Financial Transaction  Text Clasifier</title>
-      <link>https://mariamonzon.com/project/text-classifier-bayes/</link>
+      <link>https://mariamonzon.github.io/project/text-classifier-bayes/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/text-classifier-bayes/</guid>
+      <guid>https://mariamonzon.github.io/project/text-classifier-bayes/</guid>
       <description>&lt;p&gt;The aim of the project is to classify financial transactions, stored in a datasheet file, into one of seven categories listed:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Income&lt;/li&gt;
@@ -319,7 +319,7 @@ After the data cleaning and preprocessing, to check if the process was done succ
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/1-HistogramTransactionClass.png&#34; alt=&#34;transaction-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/text-classifier-bayes/1-HistogramTransactionClass.png&#34; alt=&#34;transaction-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;feature-transformation&#34;&gt;Feature transformation&lt;/h2&gt;
@@ -347,7 +347,7 @@ A common step in ML is also feature selection, i.e selection of the features in 
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/text-classifier-bayes/2-predicted-probabilities.png&#34; alt=&#34;probabilites&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;In order to quantified the performance of the classifier, many quantitative metrics were computed.
@@ -370,7 +370,7 @@ The most common evaluation method in classification is the so-called confusion m
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/2-confussion-matrix.png&#34; alt=&#34;results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/text-classifier-bayes/2-confussion-matrix.png&#34; alt=&#34;results&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;From the confusion matrix to assess the the quality of the predictions further evaluation metrics can be derived, a ranged from 0 to 1 (represents the best possible score):&lt;/p&gt;
@@ -482,7 +482,7 @@ $$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/text-classifier-bayes/metrics-roc-jaccard.png&#34; alt=&#34;metrics&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/text-classifier-bayes/metrics-roc-jaccard.png&#34; alt=&#34;metrics&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 </description>
@@ -490,9 +490,9 @@ $$Precision= \frac{2 \cdot P \cdot R}{P+R}$$
     
     <item>
       <title>Adaptive Frame Rate for Egocentric Video</title>
-      <link>https://mariamonzon.com/project/adaptive-frame-sampling/</link>
+      <link>https://mariamonzon.github.io/project/adaptive-frame-sampling/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/adaptive-frame-sampling/</guid>
+      <guid>https://mariamonzon.github.io/project/adaptive-frame-sampling/</guid>
       <description>&lt;p&gt;The goal of the project seminar is to implement an adaptive sampling strategy to dynamically
 tune the sampling rate of a wearable egocentric camera. The sampling rate will be tuned
 based on context measure, i.e., a measure of motion, extracted from the frames.&lt;/p&gt;
@@ -523,9 +523,9 @@ Furthermore, less data acquisition will also mean an energy saving in processing
     
     <item>
       <title>ECG-based algorithm for Annotation of Resuscitation Episode</title>
-      <link>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</link>
+      <link>https://mariamonzon.github.io/project/ecg-annotation-svm-classifier/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/ecg-annotation-svm-classifier/</guid>
+      <guid>https://mariamonzon.github.io/project/ecg-annotation-svm-classifier/</guid>
       <description>&lt;p&gt;Out-of hospital cardiac arrest (OHCA) is one of the major causes of death in developed countries. Resuscitation guidelines recommend different treatments depending on the heart rhythm of the patient. The objective of this work is to develop a machine learning algorithm based on the ECG signal to automatically label heart rhythms in resuscitation episodes, a key tool for the retrospectively evaluation and improvement of the quality treatment. This work would help to systematise the annotation of databases since manual annotation of rhythms is a time-consuming task which can be an obstacle for handling large data sets.&lt;/p&gt;
 &lt;p&gt;The starting point of this project was a database composed of 1631 intervals of 3 seconds taken from a larger database containing OHCA 298 episodes. To review the ECG segments, a graphical interface (GUI) was developed which allows the display of the ECGs classified by the type of arrhythmia:
 asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fibrillation (VF), pulseless electrical activity (PEA) pulse generating rhythms (PR).&lt;/p&gt;
@@ -547,7 +547,7 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/egc-svm-annotation/GUI-visualization.png&#34; alt=&#34;GUI-example-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/egc-svm-annotation/GUI-visualization.png&#34; alt=&#34;GUI-example-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;The database has been processed using a machine learning algorithm and the results obtained using cross-validation. Two classifiers have been developed selecting five features of the ECG, first to identify AS, and then to discriminate organised rhythms (PR and PEA) from ventricular arrhythmias (VT and VF).&lt;/p&gt;
@@ -569,7 +569,7 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/egc-svm-annotation/ECG-classification-Example.png&#34; alt=&#34;ECG-Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/egc-svm-annotation/ECG-classification-Example.png&#34; alt=&#34;ECG-Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;These algorithms have been combined to create a three class rhythm classification algorithm. The total accuracy of the final algorithm was 90.9%. A precise algorithm was obtained for the classification of OHCA rhythm into: AS, organised,  and  shockable  rhythms.  This  algorithm  can  be  implemented  to  analyse resuscitation episodes using 3 seconds ECG segments, and could be integrated into new methods for retrospective analysis of OHCA.&lt;/p&gt;
@@ -591,7 +591,7 @@ asystole (AS), ventricular tachycardia (VT) that degenerates into ventricular fi
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/egc-svm-annotation/SVM-classification-results.png&#34; alt=&#34;ECG-Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/egc-svm-annotation/SVM-classification-results.png&#34; alt=&#34;ECG-Visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;The results show that it is possible to automatically  interpret  resuscitation  cardiac  rhythm. These types of algorithms can be very useful since they allow an efficient rhythm classification with a minimum level of expert clinician supervision&lt;/p&gt;

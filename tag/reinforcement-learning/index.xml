@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reinforcement Learning | Maria Monzon</title>
-    <link>https://mariamonzon.com/tag/reinforcement-learning/</link>
-      <atom:link href="https://mariamonzon.com/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mariamonzon.github.io/tag/reinforcement-learning/</link>
+      <atom:link href="https://mariamonzon.github.io/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Reinforcement Learning</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mariamonzon.github.io/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>Reinforcement Learning</title>
-      <link>https://mariamonzon.com/tag/reinforcement-learning/</link>
+      <link>https://mariamonzon.github.io/tag/reinforcement-learning/</link>
     </image>
     
     <item>
       <title>Warehouse storing route optimization with Reinforcement Learning</title>
-      <link>https://mariamonzon.com/project/reinforcement-learning-warehouse/</link>
+      <link>https://mariamonzon.github.io/project/reinforcement-learning-warehouse/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/reinforcement-learning-warehouse/</guid>
+      <guid>https://mariamonzon.github.io/project/reinforcement-learning-warehouse/</guid>
       <description>&lt;p&gt;The problem represents a storage decision process where outcome is under the control of a robot, i.e, a decision maker
 agent, but also are partly random. Therefore, the problem can be well modeled as a discrete-time Markov Decision
 Processes. The approach follow was:&lt;/p&gt;
@@ -71,7 +71,7 @@ can be immediate or delayed.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/reinforcement-learning-warehouse/agent-environment.png&#34; alt=&#34;agent&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/reinforcement-learning-warehouse/agent-environment.png&#34; alt=&#34;agent&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RNN | Maria Monzon</title>
-    <link>https://mariamonzon.com/tag/rnn/</link>
-      <atom:link href="https://mariamonzon.com/tag/rnn/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://mariamonzon.github.io/tag/rnn/</link>
+      <atom:link href="https://mariamonzon.github.io/tag/rnn/index.xml" rel="self" type="application/rss+xml" />
     <description>RNN</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mariamonzon.com/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mariamonzon.github.io/media/icon_huaad826f52d8c51d03abf0418cbb027d5_448596_512x512_fill_lanczos_center_3.png</url>
       <title>RNN</title>
-      <link>https://mariamonzon.com/tag/rnn/</link>
+      <link>https://mariamonzon.github.io/tag/rnn/</link>
     </image>
     
     <item>
       <title>Biomarkers Voice Clasifier App</title>
-      <link>https://mariamonzon.com/project/voice-classifier-app/</link>
+      <link>https://mariamonzon.github.io/project/voice-classifier-app/</link>
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://mariamonzon.com/project/voice-classifier-app/</guid>
+      <guid>https://mariamonzon.github.io/project/voice-classifier-app/</guid>
       <description>&lt;p&gt;This project aim is to embeed a sound classification moden into simple android app for learning purposes. The model that classify 2-second audio samples is a small convolutional neural network.
 Sound classification is a machine learning task where you input some sound to a machine learning model to categorize it into predefined categories such as singing and speech. There are already many applications of sound classification.&lt;/p&gt;
 &lt;h2 id=&#34;__dataset__&#34;&gt;&lt;strong&gt;Dataset&lt;/strong&gt;&lt;/h2&gt;
@@ -42,7 +42,7 @@ The corpus is a 169-min collection of audio recordings of the sung and spoken ly
 
 &lt;figure  id=&#34;figure-comparison-of-spectrogram-of-a-spoken-lyrics-and-its-corresponding-singing-signal-for-the-sentence-i-believe-that-the-heart-does-go-on-adapted-from-1httpswwwsemanticscholarorgpapernus-hlt-spoken-lyrics-and-singing-sls-corpus-gao-sismanfdc6c08d687114efe37bf11175542f43890e62fa&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/voice-classifier-app/dataset.png&#34; alt=&#34;dataset&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/voice-classifier-app/dataset.png&#34; alt=&#34;dataset&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Comparison of spectrogram of a spoken lyrics and its corresponding singing signal for the sentence &amp;lsquo;I believe that the heart does go on&amp;rsquo; Adapted from &lt;a href=&#34;https://www.semanticscholar.org/paper/NUS-HLT-Spoken-Lyrics-and-Singing-%28SLS%29-Corpus-Gao-Sisman/fdc6c08d687114efe37bf11175542f43890e62fa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[1]&lt;/a&gt;
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -72,7 +72,7 @@ The model receives a 1D time representation of sound. It first processes the tim
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.com/images/voice-classifier-app/app.png&#34; alt=&#34;app-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://mariamonzon.github.io/images/voice-classifier-app/app.png&#34; alt=&#34;app-visualization&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h2 id=&#34;__references__&#34;&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/h2&gt;
