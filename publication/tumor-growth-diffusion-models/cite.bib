@@ -1,0 +1,53 @@
+@ARTICLE{Laslo2024-qb,
+  title     = "Predicting anatomical tumor growth in pediatric
+               high-grade gliomas via denoising diffusion models",
+  author    = "Laslo, Daria and Monzon, Maria and Ramakrishnan, Divya and von
+               Reppert, Marc and Stoller, Schuyler and St{\"u}cklin, Ana Sofia
+               Guerreiro and Gerber, Nicolas U and Rauschecker, Andreas and
+               Nazarian, Javad and Mueller, Sabine and Jutzeler, Catherine R
+               and Br{\"u}ningk, Sarah C",
+  abstract  = "Abstract BACKGROUND Pediatric diffuse midline glioma (DMG) has a
+               poor prognosis with radiotherapy as the standard of palliative
+               care. Radiation strategies using individual geometric
+               doseshaping have the potential to maximize patient benefit. This
+               study aimed to establish a proof-of-principle to generate
+               clinically relevant anatomical representations of the
+               progression of pediatric DMG magnetic resonance image (MRI)
+               slices through denoising diffusion implicit models (DDIM).
+               METHODS Based on the BraTS23 data, we analyzed the generation of
+               MRIs with enlarged tumor sizes starting from a baseline scan.
+               Models were pre-trained on adult glioblastoma (GBM) prior to
+               transfer learning on pediatric high-grade glioma. Test set
+               performance was evaluated using the Frechet Inception Distance
+               (FID), and Structural Similarity Index (SSIM). Qualitative
+               evaluation involved visual classification of real vs generated
+               images by two independent radiology trainees. The optimized
+               network was tested to forecast anatomical tumor growth in five
+               DMG patients from an independent dataset comprising longitudinal
+               T2-FLAIR images. RESULTS We obtain high-fidelity generated
+               images, supported by an FID of 12.4 and 0.8 SSIM on the adult
+               test set. Despite the smaller pediatric BraTS dataset yielding a
+               34.8 FID and 0.84 SSIM, human observers failed to distinguish
+               generated from real MRIs (mean recall and precision of 0.51).
+               The generated anatomical predictions also closely resemble the
+               observed longitudinal tumor progression in the pediatric DMG
+               subset. Notably, the direction and extent of tumor growth align
+               while the surrounding brain anatomy is preserved.
+               Quantitatively, the mean DICE score between segmentations of
+               generated and real tumors was 0.8. CONCLUSIONS Our model
+               produces high-quality images that conform to growth patterns of
+               pediatric DMGs. Further quantitative validation on larger
+               longitudinal datasets is required, to ensure the method's
+               robustness. The proposed method enables a personalized approach
+               for defining target regions in radiation therapy which could
+               translate to improved clinical outcomes.",
+  journal   = "Neuro. Oncol.",
+  publisher = "Oxford University Press (OUP)",
+  volume    =  26,
+  number    = "Supplement\_4",
+  pages     = "0--0",
+  month     =  jun,
+  year      =  2024,
+  copyright = "https://creativecommons.org/licenses/by-nc/4.0/",
+  language  = "en"
+}
