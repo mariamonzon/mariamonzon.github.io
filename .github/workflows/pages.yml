@@ -20,6 +20,12 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# Default environment variables
+env:
+  HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+  HUGO_ENVIRONMENT: production
+  HUGO_ENV: production
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
@@ -29,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
@@ -37,14 +43,15 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.128.2'
           extended: true
       
       - name: Build with Hugo
-        run: hugo --minify
+        run: |
+          hugo --gc --minify
       
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v4
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -54,4 +61,4 @@ jobs:
       
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
